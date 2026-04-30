@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#1F1B16" />
+<title>PeakGear Outdoors — снаряжение для четырёх сезонов</title>
+<meta name="description" content="Туристическое снаряжение PeakGear: палатки, спальники, рюкзаки. Сезонный фильтр, гайды и отзывы реальных туристов. Доставка по РФ." />
+<link rel="canonical" href="https://peakgear.example/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="PeakGear Outdoors — снаряжение, проверенное высотой" />
+<meta property="og:description" content="Отобранное туристическое снаряжение для четырёх сезонов. С гайдами и отзывами." />
+<meta property="og:image" content="https://peakgear.example/og.jpg" />
+<meta property="og:url" content="https://peakgear.example/" />
+<meta property="og:locale" content="ru_RU" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="PeakGear Outdoors" />
+<meta name="twitter:description" content="Снаряжение, проверенное высотой." />
+<meta name="twitter:image" content="https://peakgear.example/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://peakgear.example/#org",
+  "name": "PeakGear Outdoors",
+  "description": "Магазин туристического снаряжения с сезонными фильтрами и гайдами.",
+  "image": "https://peakgear.example/og.jpg",
+  "url": "https://peakgear.example/",
+  "telephone": "+7-495-000-00-00",
+  "priceRange": "₽₽",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Большая Дмитровка, 12",
+    "addressLocality": "Москва",
+    "postalCode": "125009",
+    "addressCountry": "RU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 55.7607, "longitude": 37.6149 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "10:00", "closes": "22:00"
+  }],
+  "sameAs": ["https://t.me/peakgear","https://vk.com/peakgear"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержимому</a>
+<div class="scrollbar" id="scrollbar" aria-hidden="true"></div>
+
+<header class="hdr" data-hdr>
+  <a href="#top" class="hdr__brand" aria-label="PeakGear, на главную">
+    <span class="brand__mark" aria-hidden="true">▲</span>
+    <span class="brand__word">PeakGear</span>
+    <span class="brand__sub">Outdoors</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Основная навигация">
+    <a href="#sezon">Сезон</a>
+    <a href="#snar">Снаряжение</a>
+    <a href="#gaidy">Гайды</a>
+    <a href="#otzyvy">Отзывы</a>
+    <a href="#magazin">Магазины</a>
+  </nav>
+  <div class="hdr__right">
+    <a href="#snar" class="btn btn--ghost btn--sm">В магазин</a>
+    <button class="cart" type="button" aria-label="Корзина: 0 товаров">
+      <span aria-hidden="true">⌖</span>
+      <span class="cart__count" data-cart-count>0</span>
+    </button>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="m-nav" aria-label="Меню">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="m-nav" id="m-nav" hidden>
+  <a href="#sezon">Сезон</a>
+  <a href="#snar">Снаряжение</a>
+  <a href="#gaidy">Гайды</a>
+  <a href="#otzyvy">Отзывы</a>
+  <a href="#magazin">Магазины</a>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__grid">
+    <div class="hero__type">
+      <p class="eyebrow"><span>N 55°45′</span> · <span>E 37°37′</span> · сезон 2026</p>
+      <h1 class="hero__h1">
+        <span class="line">Ходи</span>
+        <span class="line line--ital">дальше<em>.</em></span>
+        <span class="line">Стой крепче<em>.</em></span>
+        <span class="line line--shift">Возвращайся <em>целым.</em></span>
+      </h1>
+      <p class="hero__lead">PeakGear — отобранное туристическое снаряжение для четырёх сезонов и любого рельефа. С гайдами и отзывами тех, кто прошёл маршрут до тебя.</p>
+      <div class="hero__cta">
+        <a href="#sezon" class="btn btn--primary">Подобрать по сезону</a>
+        <a href="#snar" class="btn btn--ghost">Открыть каталог</a>
+      </div>
+      <p class="hero__micro">Доставка по РФ 1–3 дня. Возврат 30 дней без вопросов.</p>
+    </div>
+    <figure class="hero__photo" aria-hidden="true">
+      <div class="hero__img" role="img" aria-label="Горный гребень в утреннем свете"></div>
+      <figcaption class="hero__cap">
+        <span class="mono">SHOT 04:38</span>
+        <span>Хибины, северный гребень</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <ul class="seasons" role="list" aria-label="Быстрый выбор сезона">
+    <li><button data-quickseason="vesna" type="button"><span class="mono">01</span> Весна</button></li>
+    <li><button data-quickseason="leto" type="button"><span class="mono">02</span> Лето</button></li>
+    <li><button data-quickseason="osen" type="button"><span class="mono">03</span> Осень</button></li>
+    <li><button data-quickseason="zima" type="button"><span class="mono">04</span> Зима</button></li>
+  </ul>
+</section>
+
+<!-- СЕЗОННЫЙ ФИЛЬТР -->
+<section class="filter" id="sezon" aria-labelledby="filter-h">
+  <header class="sec__head">
+    <p class="eyebrow">§ 01 — выбор миссии</p>
+    <h2 id="filter-h" class="sec__h">Расскажи, куда идёшь — <em>соберём комплект.</em></h2>
+    <p class="sec__lead">Фильтр по сезону, рельефу и длительности. Без избыточных опций.</p>
+  </header>
+
+  <form class="filter__form" aria-label="Фильтр снаряжения" data-filter>
+    <fieldset>
+      <legend>Сезон</legend>
+      <div class="chips" role="group">
+        <label><input type="radio" name="season" value="vesna"><span>Весна</span></label>
+        <label><input type="radio" name="season" value="leto" checked><span>Лето</span></label>
+        <label><input type="radio" name="season" value="osen"><span>Осень</span></label>
+        <label><input type="radio" name="season" value="zima"><span>Зима</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Рельеф</legend>
+      <div class="chips" role="group">
+        <label><input type="radio" name="terrain" value="ravnina"><span>Равнина</span></label>
+        <label><input type="radio" name="terrain" value="les" checked><span>Лес</span></label>
+        <label><input type="radio" name="terrain" value="gory"><span>Горы</span></label>
+        <label><input type="radio" name="terrain" value="arktika"><span>Арктика</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Длительность</legend>
+      <div class="chips" role="group">
+        <label><input type="radio" name="days" value="1"><span>1 день</span></label>
+        <label><input type="radio" name="days" value="2-4" checked><span>2–4 дня</span></label>
+        <label><input type="radio" name="days" value="5+"><span>5+ дней</span></label>
+      </div>
+    </fieldset>
+    <output class="filter__out" data-filter-out aria-live="polite">Подобрано: 24 позиции под лето · лес · 2–4 дня</output>
+  </form>
+</section>
+
+<!-- КАТАЛОГ -->
+<section class="catalog" id="snar" aria-labelledby="cat-h">
+  <header class="sec__head sec__head--row">
+    <div>
+      <p class="eyebrow">§ 02 — снаряжение</p>
+      <h2 id="cat-h" class="sec__h">Снаряжение</h2>
+    </div>
+    <nav class="cat__tabs" aria-label="Категории">
+      <button type="button" class="is-active" data-cat="all">Всё</button>
+      <button type="button" data-cat="tents">Палатки</button>
+      <button type="button" data-cat="sleep">Спальники</button>
+      <button type="button" data-cat="packs">Рюкзаки</button>
+      <button type="button" data-cat="boots">Обувь</button>
+      <button type="button" data-cat="kitchen">Кухня</button>
+    </nav>
+  </header>
+
+  <ul class="bento" role="list" data-grid>
+    <li class="card card--xl" data-cat="tents" style="--ph:url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=70')">
+      <span class="card__tag mono">N · TENT</span>
+      <span class="card__price">18 900 ₽</span>
+      <h3>Палатка KETA 2</h3>
+      <p>2-местная, 3 сезона, 2.4 кг. Силиконовая ткань 20D, два входа.</p>
+      <span class="card__rate">★ 4.8 · 212</span>
+    </li>
+    <li class="card card--sq" data-cat="sleep" style="--ph:url('https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?w=900&q=70')">
+      <span class="card__tag mono">N · SLEEP</span>
+      <span class="card__price">12 400 ₽</span>
+      <h3>Спальник Polar -7</h3>
+      <p>Пух 700 fp, до -7°C комфорт. 980 г.</p>
+      <span class="card__rate">★ 4.7 · 148</span>
+    </li>
+    <li class="card card--tall" data-cat="packs" style="--ph:url('https://images.unsplash.com/photo-1551522435-a13afa10f103?w=900&q=70')">
+      <span class="card__tag mono">N · PACK</span>
+      <span class="card__price">14 600 ₽</span>
+      <h3>Рюкзак Trail 55</h3>
+      <p>55 л, анатомическая спина, ремень 8 см. Дождевик в комплекте.</p>
+      <span class="card__rate">★ 4.9 · 304</span>
+    </li>
+    <li class="card card--sq" data-cat="boots" style="--ph:url('https://images.unsplash.com/photo-1542293787938-c9e299b88008?w=900&q=70')">
+      <span class="card__tag mono">N · BOOT</span>
+      <span class="card__price">19 200 ₽</span>
+      <h3>Ботинки Ridge Mid</h3>
+      <p>Мембрана, защита Vibram. Вес пары 980 г. 36–46.</p>
+      <span class="card__rate">★ 4.6 · 89</span>
+    </li>
+    <li class="card card--wide" data-cat="kitchen" style="--ph:url('https://images.unsplash.com/photo-1521931961826-fe48677230a5?w=1200&q=70')">
+      <span class="card__tag mono">N · KIT</span>
+      <span class="card__price">3 990 ₽</span>
+      <h3>Горелка Spark Pro</h3>
+      <p>Газовая, 2.7 кВт, пьезо. Совместима с любыми резьбовыми баллонами.</p>
+      <span class="card__rate">★ 4.8 · 540</span>
+    </li>
+    <li class="card card--sq" data-cat="tents" style="--ph:url('https://images.unsplash.com/photo-1455156218388-5e61b526818b?w=900&q=70')">
+      <span class="card__tag mono">N · TENT</span>
+      <span class="card__price">26 500 ₽</span>
+      <h3>Палатка ARK 3</h3>
+      <p>3-местная, 4 сезона, юбка. Снежная ветрозащита.</p>
+      <span class="card__rate">★ 4.9 · 76</span>
+    </li>
+    <li class="card card--sq" data-cat="packs" style="--ph:url('https://images.unsplash.com/photo-1622260614153-03223fb72052?w=900&q=70')">
+      <span class="card__tag mono">N · PACK</span>
+      <span class="card__price">7 800 ₽</span>
+      <h3>Рюкзак Day 28</h3>
+      <p>На 1 день, 28 л. Лёгкий каркас, два кармана для бутылок.</p>
+      <span class="card__rate">★ 4.7 · 261</span>
+    </li>
+    <li class="card card--wide card--lead" data-lead>
+      <p class="eyebrow">Лид-магнит</p>
+      <h3>PDF-чек-лист сборов на 2 ночи</h3>
+      <p>Скачивают 4 200 человек в месяц. Подходит для леса и средней полосы.</p>
+      <a href="#leadform" class="btn btn--primary btn--sm">Скачать бесплатно</a>
+    </li>
+  </ul>
+
+  <div class="catalog__more">
+    <button type="button" class="btn btn--ghost" data-more>Загрузить ещё 12</button>
+  </div>
+</section>
+
+<!-- ГАЙДЫ -->
+<section class="guides" id="gaidy" aria-labelledby="g-h">
+  <header class="sec__head">
+    <p class="eyebrow">§ 03 — полевые заметки</p>
+    <h2 id="g-h" class="sec__h">Полевые заметки</h2>
+    <p class="sec__lead">Редакционные гайды от наших гидов и амбассадоров. Без воды.</p>
+  </header>
+
+  <div class="guides__rail" tabindex="0" aria-label="Лента гайдов, прокручивайте горизонтально">
+    <article class="g">
+      <span class="mono">№ 014 · 9 мин чтения</span>
+      <h3>Как собрать рюкзак на 3 дня и не сорвать спину</h3>
+      <p>Развесовка по зонам, центр тяжести, что класть в дно — что наверх.</p>
+      <a href="#" aria-label="Читать гайд: как собрать рюкзак на 3 дня">Читать →</a>
+    </article>
+    <article class="g">
+      <span class="mono">№ 013 · 6 мин</span>
+      <h3>Слои одежды: тёплый ноябрь в Хибинах</h3>
+      <p>База, среднее, мембрана. Разница между фликом и софтшеллом на практике.</p>
+      <a href="#" aria-label="Читать гайд: слои одежды">Читать →</a>
+    </article>
+    <article class="g">
+      <span class="mono">№ 012 · 4 мин</span>
+      <h3>Чек-лист аптечки для одиночного похода</h3>
+      <p>Минимум 11 позиций, без которых не выходим. Веса и сроки годности.</p>
+      <a href="#" aria-label="Читать гайд: аптечка">Читать →</a>
+    </article>
+    <article class="g">
+      <span class="mono">№ 011 · 7 мин</span>
+      <h3>Палатка под дождём: установка за 4 минуты</h3>
+      <p>Порядок действий при ливне, как не залить тамбур и спальник.</p>
+      <a href="#" aria-label="Читать гайд: палатка под дождём">Читать →</a>
+    </article>
+  </div>
+
+  <div class="map" id="map-routes" aria-label="Карта маршрутов"></div>
+  <p class="map__cap mono">14 проверенных маршрутов от 1 до 7 дней · OpenStreetMap</p>
+</section>
+
+<!-- UGC -->
+<section class="ugc" id="otzyvy" aria-labelledby="u-h">
+  <header class="sec__head">
+    <p class="eyebrow">§ 04 — снаряжение в деле</p>
+    <h2 id="u-h" class="sec__h">Не пресс-релизы. <em>Реальные кадры.</em></h2>
+    <p class="sec__lead">Фото и впечатления покупателей с маршрутов. Верифицированные заказы.</p>
+  </header>
+
+  <ul class="masonry" role="list">
+    <li class="ugc__c">
+      <div class="ugc__ph" style="--ph:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=70')" aria-hidden="true"></div>
+      <p class="ugc__quote">«Палатку трясло на гребне всю ночь — выдержала. Колышки купил отдельно, штатные слабые.»</p>
+      <p class="ugc__meta"><strong>Алексей</strong> · Кавказский заповедник, 4 дня · ★ 4/5</p>
+      <span class="ugc__verify mono">⓿ верифицирован</span>
+    </li>
+    <li class="ugc__c">
+      <div class="ugc__ph" style="--ph:url('https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=900&q=70')" aria-hidden="true"></div>
+      <p class="ugc__quote">«Ботинки разносила за 2 дня. Болот и курумника не боятся, ноги сухие.»</p>
+      <p class="ugc__meta"><strong>Дина</strong> · Хибины, 6 дней · ★ 5/5</p>
+      <span class="ugc__verify mono">⓿ верифицирован</span>
+    </li>
+    <li class="ugc__c">
+      <div class="ugc__ph" style="--ph:url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=900&q=70')" aria-hidden="true"></div>
+      <p class="ugc__quote">«Спальник на -7 при +2 расстёгиваешь — иначе жарко. То что нужно для весны.»</p>
+      <p class="ugc__meta"><strong>Игорь</strong> · Карелия, 3 дня · ★ 5/5</p>
+      <span class="ugc__verify mono">⓿ верифицирован</span>
+    </li>
+    <li class="ugc__c">
+      <div class="ugc__ph" style="--ph:url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=900&q=70')" aria-hidden="true"></div>
+      <p class="ugc__quote">«Горелка с пьезо — спички больше не вожу. Кипятит литр за 4 минуты на ветру.»</p>
+      <p class="ugc__meta"><strong>Маша</strong> · Алтай, 5 дней · ★ 5/5</p>
+      <span class="ugc__verify mono">⓿ верифицирован</span>
+    </li>
+    <li class="ugc__c">
+      <div class="ugc__ph" style="--ph:url('https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?w=900&q=70')" aria-hidden="true"></div>
+      <p class="ugc__quote">«Рюкзак Trail 55 — спина не уставала к концу 30-км дня. Два кармана пояса спасают.»</p>
+      <p class="ugc__meta"><strong>Сергей</strong> · Урал, 4 дня · ★ 5/5</p>
+      <span class="ugc__verify mono">⓿ верифицирован</span>
+    </li>
+    <li class="ugc__c">
+      <div class="ugc__ph" style="--ph:url('https://images.unsplash.com/photo-1496545672447-f699b503d270?w=900&q=70')" aria-hidden="true"></div>
+      <p class="ugc__quote">«Палатка ARK 3 на снегу — юбку надо грузить. Без снега ставится за 6 минут.»</p>
+      <p class="ugc__meta"><strong>Олег</strong> · Полярный Урал, 7 дней · ★ 4/5</p>
+      <span class="ugc__verify mono">⓿ верифицирован</span>
+    </li>
+  </ul>
+  <p class="ugc__cta"><a href="#" class="link-arrow">Все 1 248 отзывов</a></p>
+</section>
+
+<!-- ЛИД-МАГНИТ -->
+<section class="lead" id="leadform" aria-labelledby="l-h">
+  <div class="lead__wrap">
+    <div class="lead__copy">
+      <p class="eyebrow">§ 05 — для тех, кто идёт впервые</p>
+      <h2 id="l-h" class="sec__h">Чек-лист новичка.</h2>
+      <p>PDF на 2 страницы: что брать в первый поход на 2 ночи, чтобы не таскать лишние 4 кг. Без спама — одно-два письма в месяц.</p>
+      <ul class="lead__bullets">
+        <li>27 позиций по приоритету</li>
+        <li>Раскладка по весу и зонам рюкзака</li>
+        <li>Что НЕ брать (часто берут зря)</li>
+      </ul>
+    </div>
+    <form class="lead__form" data-leadform novalidate>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" name="email" required placeholder="adventure@mail.ru" autocomplete="email" />
+        <em class="field__err" data-err>Введите корректный email</em>
+      </label>
+      <label class="check">
+        <input type="checkbox" required />
+        <span>Согласен с <a href="#">политикой обработки</a></span>
+      </label>
+      <button type="submit" class="btn btn--primary">Получить чек-лист</button>
+      <p class="lead__ok" data-ok hidden>Отправили на почту. Если не пришло за 5 минут — проверьте «Спам».</p>
+    </form>
+  </div>
+</section>
+
+<!-- МАГАЗИНЫ -->
+<section class="shops" id="magazin" aria-labelledby="s-h">
+  <header class="sec__head">
+    <p class="eyebrow">§ 06 — где забрать</p>
+    <h2 id="s-h" class="sec__h">Шесть точек. <em>Москва и Санкт-Петербург.</em></h2>
+  </header>
+  <div class="shops__grid">
+    <ul class="shops__list" role="list">
+      <li><strong>Москва · Центр</strong><span>Большая Дмитровка, 12</span><span class="mono">10:00–22:00</span></li>
+      <li><strong>Москва · Север</strong><span>Дмитровское ш., 73</span><span class="mono">10:00–21:00</span></li>
+      <li><strong>Москва · Юго-Запад</strong><span>Профсоюзная, 56</span><span class="mono">10:00–21:00</span></li>
+      <li><strong>СПб · Центр</strong><span>Невский, 88</span><span class="mono">10:00–22:00</span></li>
+      <li><strong>СПб · Петроградка</strong><span>Каменноостровский, 24</span><span class="mono">10:00–21:00</span></li>
+      <li><strong>Склад / самовывоз</strong><span>МО, Реутов, ул. Победы, 4</span><span class="mono">пн–пт 09:00–18:00</span></li>
+    </ul>
+    <div class="map map--shops" id="map-shops" aria-label="Карта магазинов"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" aria-labelledby="f-h">
+  <header class="sec__head">
+    <p class="eyebrow">§ 07 — частые вопросы</p>
+    <h2 id="f-h" class="sec__h">FAQ</h2>
+  </header>
+  <ul class="faq__list" role="list">
+    <li>
+      <details><summary>Можно примерить перед покупкой?</summary>
+      <p>Да, в любом из шести магазинов. Курьерская доставка с примеркой — по Москве и СПб, 30 минут на 3 размера.</p></details>
+    </li>
+    <li>
+      <details><summary>Как работает гарантия 30 дней?</summary>
+      <p>Возврат любого нераспакованного товара 30 дней. Распакованного — если не подошёл размер или есть брак.</p></details>
+    </li>
+    <li>
+      <details><summary>Подойдёт ли палатка KETA 2 для зимы?</summary>
+      <p>Нет, это 3-сезонная модель. Для зимы — палатка ARK 3 или ARK 4 с юбкой и каркасом 4 сезона.</p></details>
+    </li>
+    <li>
+      <details><summary>Как подобрать размер обуви?</summary>
+      <p>Берите на полразмера больше уличной — для тёплого носка и спусков. Если сомневаетесь, позвоните: +7 495 000 00 00.</p></details>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr__top">
+    <div>
+      <p class="brand__word">PeakGear</p>
+      <p class="ftr__tag">Снаряжение для людей, которые возвращаются.</p>
+    </div>
+    <nav aria-label="В подвале">
+      <a href="#snar">Каталог</a>
+      <a href="#gaidy">Гайды</a>
+      <a href="#magazin">Магазины</a>
+      <a href="#">Доставка</a>
+      <a href="#">Гарантия</a>
+    </nav>
+    <ul class="ftr__soc" role="list">
+      <li><a href="#" aria-label="Telegram">TG</a></li>
+      <li><a href="#" aria-label="ВКонтакте">VK</a></li>
+      <li><a href="#" aria-label="YouTube">YT</a></li>
+    </ul>
+  </div>
+  <p class="ftr__bottom">PeakGear Outdoors © 2026 · <a href="#">Политика конфиденциальности</a> · <a href="#">Оферта</a></p>
+</footer>
+
+<a href="#sezon" class="sticky-cta" aria-label="Подобрать снаряжение по сезону">Подобрать снаряжение →</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>

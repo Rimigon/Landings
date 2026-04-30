@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FBFCFE">
+
+    <title>ClearView Optics — офтальмологическая клиника. Диагностика, очки, лазерная коррекция</title>
+    <meta name="description" content="Офтальмологическая клиника ClearView Optics: диагностика зрения за 40 минут, виртуальная примерка 200+ оправ, лазерная коррекция Femto-LASIK, врачи с практикой от 8 лет.">
+    <meta name="keywords" content="офтальмолог, проверка зрения, очки, контактные линзы, лазерная коррекция, виртуальная примерка очков">
+    <link rel="canonical" href="https://clearview-optics.example/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="ClearView Optics">
+    <meta property="og:title" content="ClearView Optics — клиника зрения с виртуальной примеркой очков">
+    <meta property="og:description" content="Диагностика, лазерная коррекция, виртуальная примерка оправ. Запись на завтра, подтверждение за 5 минут.">
+    <meta property="og:url" content="https://clearview-optics.example/">
+    <meta property="og:image" content="https://clearview-optics.example/og-cover.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ClearView Optics — клиника зрения">
+    <meta name="twitter:description" content="Виртуальная примерка очков и приём у офтальмолога за 40 минут.">
+    <meta name="twitter:image" content="https://clearview-optics.example/og-cover.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "ClearView Optics",
+        "image": "https://clearview-optics.example/og-cover.jpg",
+        "@id": "https://clearview-optics.example/",
+        "url": "https://clearview-optics.example/",
+        "telephone": "+7 495 000 00 00",
+        "priceRange": "₽₽",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Зрительная, 12",
+            "addressLocality": "Москва",
+            "postalCode": "101000",
+            "addressCountry": "RU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 55.7558,
+            "longitude": 37.6173
+        },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "21:00"
+        },{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday","Sunday"],
+            "opens": "10:00",
+            "closes": "19:00"
+        }],
+        "medicalSpecialty": "Ophthalmologic",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "1284"
+        }
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">К основному содержимому</a>
+
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="header" role="banner">
+        <div class="container header__inner">
+            <a class="logo" href="#hero" aria-label="ClearView Optics — на главную">
+                <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+                    <circle cx="11" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="23" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M18 16 L18 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>ClearView <em>Optics</em></span>
+            </a>
+            <nav class="nav" aria-label="Основная навигация">
+                <a href="#try-on">Примерка</a>
+                <a href="#services">Услуги</a>
+                <a href="#doctors">Врачи</a>
+                <a href="#knowledge">База знаний</a>
+                <a href="#faq">Вопросы</a>
+            </nav>
+            <a class="btn btn--primary header__cta" href="#booking">Записаться</a>
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+            <a href="#try-on">Примерка</a>
+            <a href="#services">Услуги</a>
+            <a href="#doctors">Врачи</a>
+            <a href="#knowledge">База знаний</a>
+            <a href="#faq">Вопросы</a>
+            <a class="btn btn--primary" href="#booking">Записаться</a>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section id="hero" class="hero" aria-labelledby="hero-title">
+            <div class="container hero__grid">
+                <div class="hero__copy">
+                    <span class="eyebrow">Клиника зрения · Москва</span>
+                    <h1 id="hero-title" class="hero__title">
+                        Зрение <span class="title-italic">без</span><br>
+                        компромиссов.<br>
+                        <span class="title-stroke">Оправа,</span> которая<br>
+                        идёт <em>именно вам</em>.
+                    </h1>
+                    <p class="hero__lead">
+                        Проверка зрения за 40 минут, виртуальная примерка 200+ оправ и врачи с практикой от восьми лет. Запись на завтра, подтверждение за пять минут.
+                    </p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary btn--lg" href="#booking">Записаться на приём</a>
+                        <a class="btn btn--ghost btn--lg" href="#try-on">Примерить онлайн</a>
+                    </div>
+                    <p class="hero__hint" aria-live="polite">
+                        <span class="dot"></span> Сегодня 14 свободных слотов · ближайший в 16:30
+                    </p>
+                </div>
+
+                <div class="hero__visual" aria-hidden="true">
+                    <div class="lens" data-parallax="0.18">
+                        <svg viewBox="0 0 480 480" width="100%" height="100%">
+                            <defs>
+                                <radialGradient id="g1" cx="50%" cy="40%" r="60%">
+                                    <stop offset="0%" stop-color="#DBE8FE"/>
+                                    <stop offset="100%" stop-color="#FBFCFE"/>
+                                </radialGradient>
+                            </defs>
+                            <circle cx="240" cy="240" r="200" fill="url(#g1)"/>
+                            <circle cx="240" cy="240" r="200" fill="none" stroke="#2D7FF9" stroke-width="1.5"/>
+                            <circle cx="240" cy="240" r="160" fill="none" stroke="#2D7FF9" stroke-width="1" stroke-dasharray="2 6"/>
+                            <circle cx="240" cy="240" r="60" fill="#0A1628"/>
+                            <circle cx="220" cy="220" r="14" fill="#FBFCFE"/>
+                            <text x="50" y="40" font-family="JetBrains Mono" font-size="11" fill="#4A5670">OD · −2.25</text>
+                            <text x="370" y="460" font-family="JetBrains Mono" font-size="11" fill="#4A5670">OS · −1.75</text>
+                        </svg>
+                    </div>
+                    <div class="floating-card floating-card--1" data-parallax="-0.08">
+                        <span class="eyebrow">Острота</span>
+                        <strong>1.0</strong>
+                        <small>после коррекции</small>
+                    </div>
+                    <div class="floating-card floating-card--2" data-parallax="0.12">
+                        <span class="eyebrow">Стаж врача</span>
+                        <strong>14 лет</strong>
+                        <small>д.м.н. М. Сорокина</small>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__rule" aria-hidden="true"></div>
+        </section>
+
+        <section id="trust-bar" class="trust-bar" aria-label="Достижения клиники">
+            <div class="ticker">
+                <div class="ticker__track">
+                    <span>12 лет в профессии</span><span aria-hidden="true">·</span>
+                    <span>38 000 пациентов</span><span aria-hidden="true">·</span>
+                    <span>сертификация ISO 9001</span><span aria-hidden="true">·</span>
+                    <span>работаем с ДМС</span><span aria-hidden="true">·</span>
+                    <span>оборудование Zeiss и Topcon</span><span aria-hidden="true">·</span>
+                    <span>рейтинг 4.9 / 1284 отзыва</span><span aria-hidden="true">·</span>
+                    <span>12 лет в профессии</span><span aria-hidden="true">·</span>
+                    <span>38 000 пациентов</span><span aria-hidden="true">·</span>
+                    <span>сертификация ISO 9001</span><span aria-hidden="true">·</span>
+                    <span>работаем с ДМС</span><span aria-hidden="true">·</span>
+                    <span>оборудование Zeiss и Topcon</span><span aria-hidden="true">·</span>
+                    <span>рейтинг 4.9 / 1284 отзыва</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="try-on" class="try-on reveal" aria-labelledby="try-on-title">
+            <div class="container try-on__grid">
+                <div class="try-on__head">
+                    <span class="eyebrow">Виртуальная примерка</span>
+                    <h2 id="try-on-title" class="section-title">Примерьте 200 оправ, не вставая с дивана.</h2>
+                    <p class="section-lead">Включите камеру, выберите оправу — алгоритм подгонит её под форму лица за полсекунды. Сохраните снимок и покажите врачу при записи.</p>
+                </div>
+
+                <div class="try-on__camera" aria-label="Окно виртуальной примерки">
+                    <div class="camera">
+                        <div class="camera__frame">
+                            <video id="cam-video" autoplay muted playsinline aria-hidden="true"></video>
+                            <div class="camera__placeholder" id="cam-placeholder">
+                                <svg viewBox="0 0 64 64" width="48" height="48" aria-hidden="true">
+                                    <rect x="8" y="18" width="48" height="32" rx="4" fill="none" stroke="#2D7FF9" stroke-width="2"/>
+                                    <circle cx="32" cy="34" r="9" fill="none" stroke="#2D7FF9" stroke-width="2"/>
+                                    <path d="M22 18 L26 12 L38 12 L42 18" fill="none" stroke="#2D7FF9" stroke-width="2"/>
+                                </svg>
+                                <p>Нажмите «Запустить примерку», чтобы включить камеру</p>
+                            </div>
+                            <div class="camera__overlay" id="cam-overlay" aria-hidden="true">
+                                <svg viewBox="0 0 320 100" preserveAspectRatio="xMidYMid meet">
+                                    <g id="frame-svg" fill="none" stroke="#0A1628" stroke-width="3" stroke-linecap="round">
+                                        <ellipse cx="80" cy="50" rx="50" ry="36"/>
+                                        <ellipse cx="240" cy="50" rx="50" ry="36"/>
+                                        <line x1="130" y1="50" x2="190" y2="50"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary btn--lg camera__btn" id="cam-start">Запустить примерку</button>
+                    </div>
+                </div>
+
+                <div class="try-on__catalog" aria-label="Каталог оправ">
+                    <div class="catalog">
+                        <button class="catalog__chip is-active" data-frame="round">Round</button>
+                        <button class="catalog__chip" data-frame="cat">Cat-eye</button>
+                        <button class="catalog__chip" data-frame="aviator">Aviator</button>
+                        <button class="catalog__chip" data-frame="square">Square</button>
+                        <button class="catalog__chip" data-frame="oval">Oval</button>
+                    </div>
+                    <ol class="steps" aria-label="Как пользоваться примеркой">
+                        <li><span class="steps__num">01</span><div><strong>Разрешите камеру</strong><p>Доступ запрашивается один раз и не сохраняет видео.</p></div></li>
+                        <li><span class="steps__num">02</span><div><strong>Выберите оправу</strong><p>Алгоритм подгонит размер по межзрачковому расстоянию.</p></div></li>
+                        <li><span class="steps__num">03</span><div><strong>Сохраните снимок</strong><p>Покажите врачу при записи — учтём в подборе.</p></div></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services reveal" aria-labelledby="services-title">
+            <div class="container">
+                <header class="services__head">
+                    <span class="eyebrow">Услуги</span>
+                    <h2 id="services-title" class="section-title">Что мы <em>делаем</em>.</h2>
+                </header>
+                <div class="bento">
+                    <article class="bento__card bento__card--xl">
+                        <span class="bento__num">01</span>
+                        <h3>Полная диагностика зрения</h3>
+                        <p>7 приборов, 40 минут, письменное заключение. Авторефрактометрия, биомикроскопия, измерение ВГД, осмотр глазного дна.</p>
+                        <span class="bento__price">от 3 200 ₽</span>
+                    </article>
+                    <article class="bento__card bento__card--md">
+                        <span class="bento__num">02</span>
+                        <h3>Femto-LASIK</h3>
+                        <p>Лазерная коррекция без скальпеля.</p>
+                        <span class="bento__price">от 89 000 ₽ / глаз</span>
+                    </article>
+                    <article class="bento__card bento__card--sm">
+                        <span class="bento__num">03</span>
+                        <h3>Дети 3+</h3>
+                        <p>Игровая диагностика без капель.</p>
+                    </article>
+                    <article class="bento__card bento__card--sm">
+                        <span class="bento__num">04</span>
+                        <h3>Контактные линзы</h3>
+                        <p>Подбор и обучение.</p>
+                    </article>
+                    <article class="bento__card bento__card--md">
+                        <span class="bento__num">05</span>
+                        <h3>Очки по рецепту</h3>
+                        <p>Линзы Zeiss, Hoya, Essilor. Изготовление за 1–3 дня.</p>
+                    </article>
+                    <article class="bento__card bento__card--md bento__card--accent">
+                        <span class="bento__num">06</span>
+                        <h3>Ортокератология</h3>
+                        <p>Ночные линзы — днём вы видите без очков.</p>
+                        <span class="bento__price">от 24 000 ₽</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="doctors" class="doctors reveal" aria-labelledby="doctors-title">
+            <div class="container">
+                <header class="doctors__head">
+                    <span class="eyebrow">Команда</span>
+                    <h2 id="doctors-title" class="section-title">Врачи, которых мы бы привели<br>к собственным детям.</h2>
+                    <p class="section-lead">Каждый офтальмолог проходит ежегодную стажировку в клиниках Германии и Швейцарии.</p>
+                </header>
+                <div class="doctors__scroller" tabindex="0" aria-label="Карусель врачей">
+                    <article class="doctor">
+                        <div class="doctor__photo" aria-hidden="true">
+                            <svg viewBox="0 0 200 240" width="100%" height="100%"><rect width="200" height="240" fill="#DBE8FE"/><circle cx="100" cy="95" r="38" fill="#FBFCFE"/><path d="M40 240 Q100 150 160 240Z" fill="#FBFCFE"/></svg>
+                        </div>
+                        <h3>Мария Сорокина</h3>
+                        <p class="doctor__role">Главный офтальмолог · д.м.н.</p>
+                        <dl class="doctor__meta">
+                            <div><dt>Стаж</dt><dd>14 лет</dd></div>
+                            <div><dt>Специализация</dt><dd>Лазерная коррекция</dd></div>
+                            <div><dt>Рейтинг</dt><dd>4.9 / 312 отзывов</dd></div>
+                        </dl>
+                    </article>
+                    <article class="doctor">
+                        <div class="doctor__photo" aria-hidden="true">
+                            <svg viewBox="0 0 200 240" width="100%" height="100%"><rect width="200" height="240" fill="#C8F0E4"/><circle cx="100" cy="95" r="38" fill="#FBFCFE"/><path d="M40 240 Q100 150 160 240Z" fill="#FBFCFE"/></svg>
+                        </div>
+                        <h3>Антон Левин</h3>
+                        <p class="doctor__role">Офтальмолог-хирург</p>
+                        <dl class="doctor__meta">
+                            <div><dt>Стаж</dt><dd>11 лет</dd></div>
+                            <div><dt>Специализация</dt><dd>Катаракта, ИОЛ</dd></div>
+                            <div><dt>Рейтинг</dt><dd>4.9 / 248 отзывов</dd></div>
+                        </dl>
+                    </article>
+                    <article class="doctor">
+                        <div class="doctor__photo" aria-hidden="true">
+                            <svg viewBox="0 0 200 240" width="100%" height="100%"><rect width="200" height="240" fill="#FFE4DF"/><circle cx="100" cy="95" r="38" fill="#FBFCFE"/><path d="M40 240 Q100 150 160 240Z" fill="#FBFCFE"/></svg>
+                        </div>
+                        <h3>Елена Ким</h3>
+                        <p class="doctor__role">Детский офтальмолог</p>
+                        <dl class="doctor__meta">
+                            <div><dt>Стаж</dt><dd>9 лет</dd></div>
+                            <div><dt>Специализация</dt><dd>Дети 3+, ортокератология</dd></div>
+                            <div><dt>Рейтинг</dt><dd>5.0 / 187 отзывов</dd></div>
+                        </dl>
+                    </article>
+                    <article class="doctor">
+                        <div class="doctor__photo" aria-hidden="true">
+                            <svg viewBox="0 0 200 240" width="100%" height="100%"><rect width="200" height="240" fill="#0A1628"/><circle cx="100" cy="95" r="38" fill="#DBE8FE"/><path d="M40 240 Q100 150 160 240Z" fill="#DBE8FE"/></svg>
+                        </div>
+                        <h3>Игорь Назаров</h3>
+                        <p class="doctor__role">Оптометрист</p>
+                        <dl class="doctor__meta">
+                            <div><dt>Стаж</dt><dd>8 лет</dd></div>
+                            <div><dt>Специализация</dt><dd>Подбор очков и линз</dd></div>
+                            <div><dt>Рейтинг</dt><dd>4.8 / 421 отзыв</dd></div>
+                        </dl>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process reveal" aria-labelledby="process-title">
+            <div class="container">
+                <header class="process__head">
+                    <span class="eyebrow">Как это работает</span>
+                    <h2 id="process-title" class="section-title">Как проходит ваш визит.</h2>
+                </header>
+                <ol class="process__list">
+                    <li><span class="process__num">01</span><h3>Диагностика</h3><p>7 приборов: рефрактометр, тонометр, ОКТ, фундус-камера. Без капель, если нет показаний.</p></li>
+                    <li><span class="process__num">02</span><h3>Беседа с врачом</h3><p>30 минут на разбор данных и ваших вопросов — вместо «трёх минут на пациента».</p></li>
+                    <li><span class="process__num">03</span><h3>Заключение</h3><p>Письменно: показатели, диагноз, рекомендации. Можно унести с собой и пересмотреть.</p></li>
+                    <li><span class="process__num">04</span><h3>План и контроль</h3><p>Календарь повторных приёмов, напоминания в SMS. Если что-то изменится — придёте раньше.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="knowledge" class="knowledge reveal" aria-labelledby="knowledge-title">
+            <div class="container">
+                <header class="knowledge__head">
+                    <span class="eyebrow">База знаний</span>
+                    <h2 id="knowledge-title" class="section-title">Понятно <em>о зрении</em>.</h2>
+                    <p class="section-lead">Статьи врачей без копипаста и медицинского жаргона.</p>
+                </header>
+                <div class="knowledge__filter" role="tablist" aria-label="Категории статей">
+                    <button class="chip is-active" data-cat="all" role="tab" aria-selected="true">Все</button>
+                    <button class="chip" data-cat="kids" role="tab">Дети</button>
+                    <button class="chip" data-cat="lens" role="tab">Линзы</button>
+                    <button class="chip" data-cat="laser" role="tab">Лазер</button>
+                    <button class="chip" data-cat="screen" role="tab">Гаджеты</button>
+                </div>
+                <div class="knowledge__grid">
+                    <article class="article" data-cat="kids">
+                        <span class="article__cat">Дети</span>
+                        <h3>Когда вести ребёнка к офтальмологу впервые</h3>
+                        <p>Чек-лист по возрастам: 3 месяца, 1 год, 3 года, перед школой.</p>
+                        <span class="article__time">5 мин чтения</span>
+                    </article>
+                    <article class="article" data-cat="lens">
+                        <span class="article__cat">Линзы</span>
+                        <h3>Однодневные vs ежемесячные: что выбрать</h3>
+                        <p>Сравнили по комфорту, цене за год и риску воспалений.</p>
+                        <span class="article__time">7 мин чтения</span>
+                    </article>
+                    <article class="article" data-cat="laser">
+                        <span class="article__cat">Лазер</span>
+                        <h3>Femto-LASIK: разбор по шагам</h3>
+                        <p>Что происходит за 12 минут на каждом этапе и почему.</p>
+                        <span class="article__time">9 мин чтения</span>
+                    </article>
+                    <article class="article" data-cat="screen">
+                        <span class="article__cat">Гаджеты</span>
+                        <h3>Правило 20-20-20: миф или работает</h3>
+                        <p>Что говорят последние исследования о компьютерном зрении.</p>
+                        <span class="article__time">4 мин чтения</span>
+                    </article>
+                    <article class="article" data-cat="kids">
+                        <span class="article__cat">Дети</span>
+                        <h3>Близорукость в начальной школе</h3>
+                        <p>Почему растёт и как затормозить — атропин, ОК-линзы, режим.</p>
+                        <span class="article__time">8 мин чтения</span>
+                    </article>
+                    <article class="article" data-cat="laser">
+                        <span class="article__cat">Лазер</span>
+                        <h3>Кому нельзя делать коррекцию</h3>
+                        <p>Список абсолютных и относительных противопоказаний.</p>
+                        <span class="article__time">6 мин чтения</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="booking reveal" aria-labelledby="booking-title">
+            <div class="container booking__grid">
+                <div class="booking__copy">
+                    <span class="eyebrow">Запись</span>
+                    <h2 id="booking-title" class="section-title">Запишитесь — мы перезвоним <em>за 5 минут</em>.</h2>
+                    <p class="section-lead">Оператор подтвердит время и пришлёт SMS с адресом и именем врача.</p>
+                    <ul class="booking__benefits">
+                        <li>Без предоплаты</li>
+                        <li>Перенос или отмена за 2 часа</li>
+                        <li>Парковка для пациентов</li>
+                    </ul>
+
+                    <form class="form" id="booking-form" novalidate>
+                        <div class="form__row">
+                            <label class="field">
+                                <span>Имя</span>
+                                <input type="text" name="name" required minlength="2" autocomplete="name" placeholder="Анна">
+                            </label>
+                            <label class="field">
+                                <span>Телефон</span>
+                                <input type="tel" name="phone" required pattern="[0-9+\s\-\(\)]{10,}" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="field">
+                                <span>Услуга</span>
+                                <select name="service" required>
+                                    <option value="">Выберите услугу</option>
+                                    <option>Диагностика зрения</option>
+                                    <option>Лазерная коррекция</option>
+                                    <option>Подбор очков</option>
+                                    <option>Контактные линзы</option>
+                                    <option>Детский приём</option>
+                                </select>
+                            </label>
+                            <label class="field">
+                                <span>Дата</span>
+                                <input type="date" name="date" required>
+                            </label>
+                        </div>
+                        <fieldset class="form__time" aria-label="Время приёма">
+                            <legend>Удобное время</legend>
+                            <label><input type="radio" name="time" value="morning" required><span>Утро</span></label>
+                            <label><input type="radio" name="time" value="day"><span>День</span></label>
+                            <label><input type="radio" name="time" value="evening"><span>Вечер</span></label>
+                        </fieldset>
+                        <button type="submit" class="btn btn--primary btn--lg btn--full">Записаться на приём</button>
+                        <p class="form__legal">Нажимая кнопку, вы соглашаетесь с <a href="#">обработкой персональных данных</a>.</p>
+                        <p class="form__success" id="form-success" hidden>Заявка принята. Перезвоним в течение 5 минут.</p>
+                    </form>
+                </div>
+
+                <aside class="booking__map" aria-label="Карта расположения клиники">
+                    <div class="map">
+                        <div class="map__canvas" id="map" aria-label="Москва, Чистопрудный бульвар, 12"></div>
+                        <div class="map__pin">
+                            <strong>Чистопрудный бульвар, 12</strong>
+                            <span>м. Чистые пруды · 4 минуты пешком</span>
+                            <a href="https://yandex.ru/maps/?text=Москва, Чистопрудный бульвар, 12" target="_blank" rel="noopener" class="link">Открыть в Яндекс.Картах</a>
+                        </div>
+                    </div>
+                    <dl class="contacts">
+                        <div><dt>Телефон</dt><dd><a href="tel:+74950000000">+7 495 000 00 00</a></dd></div>
+                        <div><dt>Email</dt><dd><a href="mailto:hello@clearview-optics.example">hello@clearview-optics.example</a></dd></div>
+                        <div><dt>Будни</dt><dd>09:00 — 21:00</dd></div>
+                        <div><dt>Выходные</dt><dd>10:00 — 19:00</dd></div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <section id="faq" class="faq reveal" aria-labelledby="faq-title">
+            <div class="container faq__grid">
+                <header class="faq__head">
+                    <span class="eyebrow">Вопросы</span>
+                    <h2 id="faq-title" class="section-title">Что спрашивают<br>чаще всего.</h2>
+                </header>
+                <div class="faq__list">
+                    <details class="acc"><summary>Сколько стоит первичный приём <span class="acc__plus" aria-hidden="true"></span></summary><div>Полная диагностика зрения — от 3 200 ₽, включает 7 исследований и письменное заключение. Дополнительные процедуры оплачиваются отдельно по согласованию с врачом.</div></details>
+                    <details class="acc"><summary>Работаете ли с ДМС <span class="acc__plus" aria-hidden="true"></span></summary><div>Да, у нас прямые договоры с 14 страховыми компаниями. Перед визитом уточните название клиники у вашего страхового представителя.</div></details>
+                    <details class="acc"><summary>Сколько длится приём <span class="acc__plus" aria-hidden="true"></span></summary><div>Первичный приём — 40 минут, повторный — 20–30 минут. На детский визит закладываем час, чтобы ребёнок успел освоиться.</div></details>
+                    <details class="acc"><summary>С какого возраста принимаете детей <span class="acc__plus" aria-hidden="true"></span></summary><div>С 3 лет. Для младшего возраста рекомендуем профильные детские офтальмологические центры.</div></details>
+                    <details class="acc"><summary>Кому нельзя делать лазерную коррекцию <span class="acc__plus" aria-hidden="true"></span></summary><div>Беременным и кормящим, при тонкой роговице, прогрессирующей миопии, аутоиммунных и системных заболеваниях. Полный список — после очной диагностики.</div></details>
+                    <details class="acc"><summary>Есть ли парковка <span class="acc__plus" aria-hidden="true"></span></summary><div>Да, бесплатная подземная парковка на 2 часа для пациентов. Регистрируем номер на ресепшен.</div></details>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer__grid">
+            <div>
+                <a class="logo logo--light" href="#hero">
+                    <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+                        <circle cx="11" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="23" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>ClearView <em>Optics</em></span>
+                </a>
+                <p class="footer__about">Офтальмологическая клиника на Чистых прудах. Лицензия №ЛО-77-01-019823.</p>
+            </div>
+            <nav aria-label="Разделы">
+                <h4>Разделы</h4>
+                <a href="#try-on">Виртуальная примерка</a>
+                <a href="#services">Услуги</a>
+                <a href="#doctors">Врачи</a>
+                <a href="#knowledge">База знаний</a>
+            </nav>
+            <div>
+                <h4>Контакты</h4>
+                <p>Москва, ул. Зрительная, 12</p>
+                <p><a href="tel:+74950000000">+7 495 000 00 00</a></p>
+                <p><a href="mailto:hello@clearview-optics.example">hello@clearview-optics.example</a></p>
+            </div>
+            <div>
+                <h4>Документы</h4>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Публичная оферта</a>
+                <a href="#">Лицензии</a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <small>© 2026 ClearView Optics. Все права защищены.</small>
+            <small>Made with care · Inter & Fraunces</small>
+        </div>
+    </footer>
+
+    <a href="#booking" class="floating-cta" aria-label="Записаться на приём">
+        <span>Записаться</span>
+    </a>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

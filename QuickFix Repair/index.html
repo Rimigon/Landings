@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0E0E0E" />
+<title>QuickFix Repair — ремонт техники с выездом мастера за 90 минут</title>
+<meta name="description" content="QuickFix Repair: вызов мастера на дом за 90 минут, фиксированная цена до начала ремонта, статус заявки в реальном времени и гарантийный кабинет на 24 месяца." />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<link rel="canonical" href="https://quickfix-repair.example/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:site_name" content="QuickFix Repair" />
+<meta property="og:title" content="QuickFix Repair — ремонт техники с выездом мастера" />
+<meta property="og:description" content="Мастер у вас дома за 90 минут. Прозрачная смета. Статус ремонта онлайн. Гарантия 24 месяца." />
+<meta property="og:url" content="https://quickfix-repair.example/" />
+<meta property="og:image" content="https://quickfix-repair.example/og.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="QuickFix Repair — ремонт техники с выездом мастера" />
+<meta name="twitter:description" content="Вызов мастера за 90 минут. Прозрачные цены. Гарантия 24 месяца." />
+<meta name="twitter:image" content="https://quickfix-repair.example/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://quickfix-repair.example/#org",
+  "name": "QuickFix Repair",
+  "description": "Ремонт бытовой и цифровой техники с выездом мастера на дом. Прозрачные цены, статус заявки в реальном времени, гарантия 24 месяца.",
+  "url": "https://quickfix-repair.example/",
+  "telephone": "+7 800 555-04-90",
+  "priceRange": "₽₽",
+  "image": "https://quickfix-repair.example/og.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Промышленная, 14",
+    "addressLocality": "Москва",
+    "postalCode": "115201",
+    "addressCountry": "RU"
+  },
+  "areaServed": ["Москва", "Санкт-Петербург", "Казань", "Екатеринбург"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "23:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.92",
+    "reviewCount": "8431"
+  },
+  "sameAs": [
+    "https://t.me/quickfix_repair",
+    "https://vk.com/quickfix_repair"
+  ]
+}
+</script>
+</head>
+
+<body class="no-js">
+<a href="#order" class="skip-link">Перейти к форме заявки</a>
+
+<header class="topbar" role="banner">
+  <a href="#top" class="logo" aria-label="QuickFix Repair, на главную">
+    <span class="logo__mark" aria-hidden="true">QF</span>
+    <span class="logo__name">QuickFix<span class="logo__sub">/repair</span></span>
+  </a>
+  <nav class="nav" aria-label="Главная навигация">
+    <a href="#how">Как это работает</a>
+    <a href="#catalog">Что чиним</a>
+    <a href="#tracker">Статус заявки</a>
+    <a href="#warranty">Гарантия</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a href="#order" class="topbar__cta">Вызвать мастера<span aria-hidden="true">→</span></a>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Среднее время выезда — 87 минут</span><span aria-hidden="true">●</span>
+    <span>Гарантия 24 месяца на работу и детали</span><span aria-hidden="true">●</span>
+    <span>Цена фиксируется до старта ремонта</span><span aria-hidden="true">●</span>
+    <span>1 247 мастеров на линии прямо сейчас</span><span aria-hidden="true">●</span>
+    <span>Сегодня свободно 38 окон</span><span aria-hidden="true">●</span>
+    <span>Среднее время выезда — 87 минут</span><span aria-hidden="true">●</span>
+    <span>Гарантия 24 месяца на работу и детали</span><span aria-hidden="true">●</span>
+    <span>Цена фиксируется до старта ремонта</span><span aria-hidden="true">●</span>
+    <span>1 247 мастеров на линии прямо сейчас</span><span aria-hidden="true">●</span>
+    <span>Сегодня свободно 38 окон</span><span aria-hidden="true">●</span>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ========== HERO ========== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__grid">
+    <div class="hero__meta">
+      <span class="tag tag--accent">Заявка №<span data-live-id>008-241</span></span>
+      <span class="tag">Москва · Сегодня</span>
+    </div>
+
+    <h1 id="hero-title" class="hero__title">
+      <span class="hero__line">Сломалось.</span>
+      <span class="hero__line hero__line--shift">Починим.</span>
+      <span class="hero__line hero__line--accent">За 90 минут.</span>
+    </h1>
+
+    <p class="hero__lead">
+      Вызов мастера на дом, фиксированная смета до старта работ
+      и live-трекинг ремонта. Без «переменных» в счёте, без посредников,
+      без «надо ещё посмотреть».
+    </p>
+
+    <div class="hero__cta">
+      <a href="#order" class="btn btn--primary">
+        <span>Вызвать мастера</span>
+        <span class="btn__arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="#tracker" class="btn btn--ghost">
+        <span class="dot dot--live" aria-hidden="true"></span>
+        <span>Где мой мастер?</span>
+      </a>
+    </div>
+
+    <ul class="hero__stats" aria-label="Ключевые показатели сервиса">
+      <li><b>87</b><span>мин. среднее время выезда</span></li>
+      <li><b>24</b><span>месяца гарантии</span></li>
+      <li><b>4.92</b><span>из 5 — 8 431 отзыв</span></li>
+      <li><b>0₽</b><span>диагностика при ремонте</span></li>
+    </ul>
+
+    <aside class="hero__card" aria-label="Карточка ближайшего мастера">
+      <div class="hero__card-row">
+        <span class="hero__card-label">Ближайший мастер</span>
+        <span class="hero__card-live"><span class="dot dot--live" aria-hidden="true"></span> в эфире</span>
+      </div>
+      <div class="hero__card-name">Артём К.</div>
+      <div class="hero__card-bar" aria-hidden="true"><i></i></div>
+      <div class="hero__card-row hero__card-row--small">
+        <span>4.97 · 1 284 ремонта</span>
+        <span data-eta>в 2,3 км · 11 мин</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="hero__bigword" aria-hidden="true">REPAIR</div>
+</section>
+
+<!-- ========== HOW ========== -->
+<section id="how" class="how" aria-labelledby="how-title">
+  <header class="section-head">
+    <span class="section-head__num">/01</span>
+    <h2 id="how-title" class="section-head__title">Четыре шага. Без сюрпризов в счёте.</h2>
+    <p class="section-head__sub">Каждый шаг закреплён договором-офертой и виден в личном кабинете.</p>
+  </header>
+
+  <ol class="steps">
+    <li class="step reveal">
+      <div class="step__num">01</div>
+      <h3 class="step__title">Заявка за 40 секунд</h3>
+      <p class="step__text">Выбираете технику, описываете поломку, отправляете адрес. Без регистрации.</p>
+      <div class="step__meta">≈ 40 сек</div>
+    </li>
+    <li class="step reveal">
+      <div class="step__num">02</div>
+      <h3 class="step__title">Фиксированная смета</h3>
+      <p class="step__text">Диспетчер согласовывает «потолок» цены. Выше — не платите ни рубля.</p>
+      <div class="step__meta">до 5 мин</div>
+    </li>
+    <li class="step reveal">
+      <div class="step__num">03</div>
+      <h3 class="step__title">Мастер у вас дома</h3>
+      <p class="step__text">Среднее окно — 87 минут. Видите движение мастера в трекере, как в такси.</p>
+      <div class="step__meta">≈ 90 мин</div>
+    </li>
+    <li class="step reveal">
+      <div class="step__num">04</div>
+      <h3 class="step__title">Гарантийный кабинет</h3>
+      <p class="step__text">Чек, акт, серийники деталей и QR-гарантия на 24 месяца — в личном кабинете.</p>
+      <div class="step__meta">24 мес.</div>
+    </li>
+  </ol>
+</section>
+
+<!-- ========== CATALOG ========== -->
+<section id="catalog" class="catalog" aria-labelledby="catalog-title">
+  <header class="section-head section-head--split">
+    <div>
+      <span class="section-head__num">/02</span>
+      <h2 id="catalog-title" class="section-head__title">Что чиним. На что даём гарантию.</h2>
+    </div>
+    <p class="section-head__sub section-head__sub--right">
+      217 категорий техники, 4 800+ моделей.<br>
+      Не нашли свою — оставьте заявку, согласуем за 5 минут.
+    </p>
+  </header>
+
+  <ul class="catalog__grid" role="list">
+    <li class="cat reveal">
+      <div class="cat__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <rect x="6" y="10" width="52" height="34" rx="2"/>
+          <path d="M6 38h52"/>
+          <path d="M22 54h20M28 44v10M36 44v10"/>
+        </svg>
+      </div>
+      <h3 class="cat__title">Ноутбуки и ПК</h3>
+      <ul class="cat__list">
+        <li>Замена матриц, клавиатур</li>
+        <li>Чистка, термопаста, пайка</li>
+        <li>Восстановление данных</li>
+      </ul>
+      <div class="cat__price">от 1 490 ₽</div>
+    </li>
+
+    <li class="cat reveal">
+      <div class="cat__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <rect x="18" y="6" width="28" height="52" rx="4"/>
+          <circle cx="32" cy="50" r="2"/>
+          <path d="M28 12h8"/>
+        </svg>
+      </div>
+      <h3 class="cat__title">Смартфоны и планшеты</h3>
+      <ul class="cat__list">
+        <li>Замена экрана/стекла за 40 мин</li>
+        <li>Аккумуляторы, разъёмы, камеры</li>
+        <li>Прошивка и разблокировка</li>
+      </ul>
+      <div class="cat__price">от 990 ₽</div>
+    </li>
+
+    <li class="cat reveal">
+      <div class="cat__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <rect x="8" y="8" width="48" height="48" rx="3"/>
+          <circle cx="32" cy="34" r="14"/>
+          <circle cx="32" cy="34" r="6"/>
+          <rect x="14" y="14" width="6" height="4"/>
+        </svg>
+      </div>
+      <h3 class="cat__title">Стиральные машины</h3>
+      <ul class="cat__list">
+        <li>Замена ТЭН, помпа, подшипники</li>
+        <li>Электроника, ошибки E-коды</li>
+        <li>Bosch, LG, Samsung, Indesit</li>
+      </ul>
+      <div class="cat__price">от 1 790 ₽</div>
+    </li>
+
+    <li class="cat reveal">
+      <div class="cat__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <rect x="14" y="6" width="36" height="52" rx="3"/>
+          <path d="M14 28h36"/>
+          <path d="M22 16v6M22 38v10"/>
+        </svg>
+      </div>
+      <h3 class="cat__title">Холодильники</h3>
+      <ul class="cat__list">
+        <li>Заправка фреона, компрессор</li>
+        <li>Уплотнители, термостат, плата</li>
+        <li>Выезд с инструментом и хладагентом</li>
+      </ul>
+      <div class="cat__price">от 2 490 ₽</div>
+    </li>
+
+    <li class="cat reveal">
+      <div class="cat__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <rect x="8" y="14" width="48" height="28" rx="2"/>
+          <path d="M8 28h48"/>
+          <path d="M22 50h20"/>
+          <path d="M32 42v8"/>
+        </svg>
+      </div>
+      <h3 class="cat__title">Телевизоры и ТВ-приставки</h3>
+      <ul class="cat__list">
+        <li>Матрица, подсветка, T-CON</li>
+        <li>Прошивка Smart TV</li>
+        <li>Настенный монтаж после ремонта</li>
+      </ul>
+      <div class="cat__price">от 1 890 ₽</div>
+    </li>
+
+    <li class="cat reveal">
+      <div class="cat__icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M10 20h44l-4 32a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4z"/>
+          <path d="M22 20v-6a10 10 0 0 1 20 0v6"/>
+        </svg>
+      </div>
+      <h3 class="cat__title">Кофемашины и мелкая техника</h3>
+      <ul class="cat__list">
+        <li>Декальцинация, замена помпы</li>
+        <li>Жернова, заварной блок</li>
+        <li>Jura, DeLonghi, Saeco, Philips</li>
+      </ul>
+      <div class="cat__price">от 1 290 ₽</div>
+    </li>
+  </ul>
+
+  <div class="catalog__cta">
+    <span>Не нашли вашу технику в списке?</span>
+    <a href="#order" class="btn btn--ghost btn--sm">Спросить мастера<span class="btn__arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- ========== TRACKER ========== -->
+<section id="tracker" class="tracker" aria-labelledby="tracker-title">
+  <header class="section-head section-head--inverted">
+    <span class="section-head__num">/03</span>
+    <h2 id="tracker-title" class="section-head__title">Статус заявки в реальном времени</h2>
+    <p class="section-head__sub">
+      Как в такси, только полезнее. Видно, где мастер, что он делает, какие детали уже у него в кейсе.
+    </p>
+  </header>
+
+  <div class="tracker__panel">
+    <div class="tracker__head">
+      <div class="tracker__id">
+        <span class="tracker__id-label">Заявка</span>
+        <strong>#QF-008-241</strong>
+      </div>
+      <div class="tracker__live"><span class="dot dot--live" aria-hidden="true"></span> live</div>
+      <button type="button" class="tracker__refresh" data-tracker-refresh aria-label="Обновить статус заявки">
+        <span aria-hidden="true">↻</span>
+      </button>
+    </div>
+
+    <ol class="tracker__steps" data-tracker-steps>
+      <li class="t-step is-done">
+        <span class="t-step__num">01</span>
+        <span class="t-step__name">Заявка принята</span>
+        <span class="t-step__time">09:14</span>
+      </li>
+      <li class="t-step is-done">
+        <span class="t-step__num">02</span>
+        <span class="t-step__name">Смета согласована</span>
+        <span class="t-step__time">09:18</span>
+      </li>
+      <li class="t-step is-active">
+        <span class="t-step__num">03</span>
+        <span class="t-step__name">Мастер в пути</span>
+        <span class="t-step__time" data-tracker-eta>≈ 11 мин</span>
+      </li>
+      <li class="t-step">
+        <span class="t-step__num">04</span>
+        <span class="t-step__name">Диагностика на месте</span>
+        <span class="t-step__time">—</span>
+      </li>
+      <li class="t-step">
+        <span class="t-step__num">05</span>
+        <span class="t-step__name">Ремонт</span>
+        <span class="t-step__time">—</span>
+      </li>
+      <li class="t-step">
+        <span class="t-step__num">06</span>
+        <span class="t-step__name">Гарантия в кабинете</span>
+        <span class="t-step__time">—</span>
+      </li>
+    </ol>
+
+    <div class="tracker__progress" aria-hidden="true">
+      <i data-tracker-bar style="width:42%"></i>
+    </div>
+
+    <div class="tracker__map" data-map role="img" aria-label="Карта движения мастера. Демо-режим, реальная карта подключается через API.">
+      <svg viewBox="0 0 800 360" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-opacity=".15" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="800" height="360" fill="url(#grid)"/>
+        <path d="M40 280 C 200 200, 320 320, 480 200 S 720 120, 760 80" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="6 8" />
+        <circle cx="40" cy="280" r="8" fill="currentColor"/>
+        <circle cx="760" cy="80" r="10" fill="none" stroke="currentColor" stroke-width="3"/>
+      </svg>
+      <div class="tracker__pin" data-tracker-pin>
+        <span class="tracker__pin-dot" aria-hidden="true"></span>
+        <span class="tracker__pin-label">Артём К. · 11 мин</span>
+      </div>
+      <div class="tracker__map-note">демо-карта · подключается к Yandex Maps / 2GIS API</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WARRANTY ========== -->
+<section id="warranty" class="warranty" aria-labelledby="warranty-title">
+  <header class="section-head section-head--split">
+    <div>
+      <span class="section-head__num">/04</span>
+      <h2 id="warranty-title" class="section-head__title">Гарантийный кабинет.<br>Бумажки больше не нужны.</h2>
+    </div>
+    <p class="section-head__sub section-head__sub--right">
+      Все ремонты, чеки, серийные номера деталей и сроки гарантии — в одном месте. Один QR — и мастер увидит историю вашей техники за секунду.
+    </p>
+  </header>
+
+  <div class="warranty__layout">
+    <ul class="warranty__list" role="list">
+      <li class="reveal">
+        <span class="warranty__num">A</span>
+        <h3>QR-гарантия 24 месяца</h3>
+        <p>Чек, акт и список замен — в одном QR. Сканирует любой сервис, не только наш.</p>
+      </li>
+      <li class="reveal">
+        <span class="warranty__num">B</span>
+        <h3>История техники</h3>
+        <p>Карточка устройства: что меняли, когда, какой пробег, когда профилактика.</p>
+      </li>
+      <li class="reveal">
+        <span class="warranty__num">C</span>
+        <h3>Повторный визит — 0 ₽</h3>
+        <p>Если поломка повторилась в гарантийный срок, мастер приезжает бесплатно. Без переписки.</p>
+      </li>
+      <li class="reveal">
+        <span class="warranty__num">D</span>
+        <h3>Возврат денег</h3>
+        <p>Не починили или повторно сломалось трижды — возвращаем 100 % стоимости работ.</p>
+      </li>
+    </ul>
+
+    <figure class="warranty__card" aria-label="Демонстрация карточки гарантии">
+      <div class="wcard">
+        <div class="wcard__head">
+          <span class="wcard__brand">QuickFix /repair</span>
+          <span class="wcard__id">№ 008-241</span>
+        </div>
+        <div class="wcard__device">Bosch WLG24160OE</div>
+        <div class="wcard__line"><span>Дата ремонта</span><b>14.04.2026</b></div>
+        <div class="wcard__line"><span>Заменено</span><b>ТЭН, помпа</b></div>
+        <div class="wcard__line"><span>Гарантия до</span><b>14.04.2028</b></div>
+        <div class="wcard__qr" aria-hidden="true">
+          <svg viewBox="0 0 80 80">
+            <rect width="80" height="80" fill="#fff"/>
+            <g fill="#0E0E0E">
+              <rect x="6" y="6" width="18" height="18"/><rect x="10" y="10" width="10" height="10" fill="#fff"/><rect x="13" y="13" width="4" height="4"/>
+              <rect x="56" y="6" width="18" height="18"/><rect x="60" y="10" width="10" height="10" fill="#fff"/><rect x="63" y="13" width="4" height="4"/>
+              <rect x="6" y="56" width="18" height="18"/><rect x="10" y="60" width="10" height="10" fill="#fff"/><rect x="13" y="63" width="4" height="4"/>
+              <rect x="30" y="8" width="3" height="3"/><rect x="36" y="8" width="3" height="3"/><rect x="42" y="8" width="3" height="3"/>
+              <rect x="30" y="14" width="3" height="3"/><rect x="40" y="14" width="3" height="3"/><rect x="46" y="14" width="3" height="3"/>
+              <rect x="30" y="20" width="3" height="3"/><rect x="36" y="20" width="3" height="3"/><rect x="42" y="20" width="3" height="3"/><rect x="48" y="20" width="3" height="3"/>
+              <rect x="8" y="30" width="3" height="3"/><rect x="14" y="30" width="3" height="3"/><rect x="20" y="30" width="3" height="3"/>
+              <rect x="30" y="30" width="3" height="3"/><rect x="36" y="30" width="3" height="3"/><rect x="46" y="30" width="3" height="3"/><rect x="56" y="30" width="3" height="3"/><rect x="64" y="30" width="3" height="3"/><rect x="70" y="30" width="3" height="3"/>
+              <rect x="30" y="36" width="3" height="3"/><rect x="40" y="36" width="3" height="3"/><rect x="50" y="36" width="3" height="3"/><rect x="60" y="36" width="3" height="3"/>
+              <rect x="30" y="42" width="3" height="3"/><rect x="36" y="42" width="3" height="3"/><rect x="46" y="42" width="3" height="3"/><rect x="56" y="42" width="3" height="3"/><rect x="66" y="42" width="3" height="3"/>
+              <rect x="30" y="48" width="3" height="3"/><rect x="40" y="48" width="3" height="3"/><rect x="44" y="48" width="3" height="3"/><rect x="52" y="48" width="3" height="3"/><rect x="60" y="48" width="3" height="3"/><rect x="70" y="48" width="3" height="3"/>
+              <rect x="30" y="56" width="3" height="3"/><rect x="36" y="56" width="3" height="3"/><rect x="42" y="56" width="3" height="3"/><rect x="48" y="56" width="3" height="3"/><rect x="56" y="56" width="3" height="3"/><rect x="64" y="56" width="3" height="3"/>
+              <rect x="30" y="62" width="3" height="3"/><rect x="40" y="62" width="3" height="3"/><rect x="50" y="62" width="3" height="3"/><rect x="60" y="62" width="3" height="3"/><rect x="68" y="62" width="3" height="3"/>
+              <rect x="30" y="68" width="3" height="3"/><rect x="36" y="68" width="3" height="3"/><rect x="44" y="68" width="3" height="3"/><rect x="56" y="68" width="3" height="3"/><rect x="66" y="68" width="3" height="3"/><rect x="72" y="68" width="3" height="3"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="reviews" aria-labelledby="reviews-title">
+  <header class="section-head">
+    <span class="section-head__num">/05</span>
+    <h2 id="reviews-title" class="section-head__title">8 431 отзыв. Средняя оценка 4.92.</h2>
+    <p class="section-head__sub">Не редактируем, не удаляем, не публикуем «своих». Каждый отзыв — после закрытой заявки.</p>
+  </header>
+
+  <ul class="reviews__grid" role="list">
+    <li class="review reveal">
+      <div class="review__head">
+        <span class="review__rate" aria-label="Оценка 5 из 5">5.0</span>
+        <span class="review__src">Яндекс</span>
+      </div>
+      <blockquote>«Холодильник встал в субботу вечером. Думал, до понедельника. Мастер был через 1 ч 20 м, фреон с собой. Цена та же, что озвучили в чате».</blockquote>
+      <cite>Дмитрий М., Москва · 12.04.2026</cite>
+    </li>
+    <li class="review reveal">
+      <div class="review__head">
+        <span class="review__rate">5.0</span>
+        <span class="review__src">2ГИС</span>
+      </div>
+      <blockquote>«Мне важно было видеть, что мастер реально едет, а не зависает. Трекер показывал каждый поворот. Никаких "ещё 15 минут" по 4 раза».</blockquote>
+      <cite>Анна Р., Санкт-Петербург · 03.04.2026</cite>
+    </li>
+    <li class="review reveal">
+      <div class="review__head">
+        <span class="review__rate">4.9</span>
+        <span class="review__src">Google</span>
+      </div>
+      <blockquote>«Через 7 месяцев та же поломка стиралки. Зашёл в кабинет, нажал "повторный визит", без вопросов починили бесплатно. Это и есть гарантия».</blockquote>
+      <cite>Игорь Ф., Казань · 28.03.2026</cite>
+    </li>
+    <li class="review reveal">
+      <div class="review__head">
+        <span class="review__rate">5.0</span>
+        <span class="review__src">Яндекс</span>
+      </div>
+      <blockquote>«Сметa зафиксирована до приезда. По факту нашли ещё одну болячку — не накидали ни рубля сверху, согласовали отдельной заявкой».</blockquote>
+      <cite>Ольга К., Екатеринбург · 19.03.2026</cite>
+    </li>
+  </ul>
+</section>
+
+<!-- ========== ORDER ========== -->
+<section id="order" class="order" aria-labelledby="order-title">
+  <header class="section-head section-head--inverted">
+    <span class="section-head__num">/06</span>
+    <h2 id="order-title" class="section-head__title">Вызвать мастера</h2>
+    <p class="section-head__sub">Три шага. Без регистрации. Звонок диспетчера в течение 5 минут.</p>
+  </header>
+
+  <form class="form" data-form novalidate aria-describedby="form-status">
+    <div class="form__progress" aria-hidden="true">
+      <i data-form-bar style="width:33.33%"></i>
+    </div>
+
+    <ol class="form__steps">
+      <li class="form__pill is-active" data-pill="1"><b>01</b> Техника</li>
+      <li class="form__pill" data-pill="2"><b>02</b> Поломка</li>
+      <li class="form__pill" data-pill="3"><b>03</b> Контакты</li>
+    </ol>
+
+    <fieldset class="form__step is-active" data-step="1">
+      <legend>Что чиним?</legend>
+      <div class="form__choices" role="radiogroup" aria-label="Тип техники">
+        <label class="choice"><input type="radio" name="device" value="phone" required><span>Смартфон / планшет</span></label>
+        <label class="choice"><input type="radio" name="device" value="laptop"><span>Ноутбук / ПК</span></label>
+        <label class="choice"><input type="radio" name="device" value="washer"><span>Стиральная машина</span></label>
+        <label class="choice"><input type="radio" name="device" value="fridge"><span>Холодильник</span></label>
+        <label class="choice"><input type="radio" name="device" value="tv"><span>Телевизор</span></label>
+        <label class="choice"><input type="radio" name="device" value="coffee"><span>Кофемашина</span></label>
+        <label class="choice"><input type="radio" name="device" value="other"><span>Другое</span></label>
+      </div>
+      <div class="form__nav">
+        <span></span>
+        <button type="button" class="btn btn--primary" data-next>Дальше<span class="btn__arrow" aria-hidden="true">→</span></button>
+      </div>
+    </fieldset>
+
+    <fieldset class="form__step" data-step="2">
+      <legend>Что случилось?</legend>
+      <label class="field">
+        <span class="field__label">Опишите поломку</span>
+        <textarea name="problem" rows="3" placeholder="Например: не сливает воду, ошибка E18, гудит насос" required minlength="10"></textarea>
+        <span class="field__hint">Минимум 10 символов. Чем подробнее, тем точнее смета.</span>
+      </label>
+      <label class="field">
+        <span class="field__label">Город / адрес выезда</span>
+        <input type="text" name="address" placeholder="Москва, ул. Пример, 12, кв. 34" required minlength="6" autocomplete="street-address">
+      </label>
+      <div class="form__nav">
+        <button type="button" class="btn btn--ghost" data-prev><span class="btn__arrow btn__arrow--back" aria-hidden="true">←</span> Назад</button>
+        <button type="button" class="btn btn--primary" data-next>Дальше<span class="btn__arrow" aria-hidden="true">→</span></button>
+      </div>
+    </fieldset>
+
+    <fieldset class="form__step" data-step="3">
+      <legend>Как с вами связаться?</legend>
+      <div class="form__row">
+        <label class="field">
+          <span class="field__label">Имя</span>
+          <input type="text" name="name" placeholder="Артём" required minlength="2" autocomplete="given-name">
+        </label>
+        <label class="field">
+          <span class="field__label">Телефон</span>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required pattern="^\+?[0-9\s\-\(\)]{10,18}$" autocomplete="tel" inputmode="tel">
+        </label>
+      </div>
+      <label class="field field--row">
+        <input type="checkbox" name="agree" required>
+        <span>Согласен с <a href="#">политикой обработки данных</a>. Это обязательно по 152-ФЗ.</span>
+      </label>
+      <div class="form__nav">
+        <button type="button" class="btn btn--ghost" data-prev><span class="btn__arrow btn__arrow--back" aria-hidden="true">←</span> Назад</button>
+        <button type="submit" class="btn btn--primary btn--lg">
+          <span>Отправить заявку</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </fieldset>
+
+    <p id="form-status" class="form__status" role="status" aria-live="polite"></p>
+  </form>
+
+  <aside class="order__trust" aria-label="Преимущества заявки">
+    <ul>
+      <li><b>0 ₽</b> диагностика, если согласились на ремонт</li>
+      <li><b>5 мин</b> — звонок диспетчера</li>
+      <li><b>87 мин</b> — среднее время выезда сегодня</li>
+      <li><b>24 мес</b> гарантия на работу и детали</li>
+    </ul>
+  </aside>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq" class="faq" aria-labelledby="faq-title">
+  <header class="section-head">
+    <span class="section-head__num">/07</span>
+    <h2 id="faq-title" class="section-head__title">Что обычно спрашивают</h2>
+  </header>
+
+  <div class="faq__list">
+    <details class="faq__item">
+      <summary><span>Сколько стоит вызов мастера?</span><span class="faq__plus" aria-hidden="true"></span></summary>
+      <p>Сам выезд — 0 ₽, если соглашаетесь на ремонт. Если отказываетесь после диагностики на месте — 490 ₽ за выезд. Это меньше такси.</p>
+    </details>
+    <details class="faq__item">
+      <summary><span>Что значит «фиксированная смета»?</span><span class="faq__plus" aria-hidden="true"></span></summary>
+      <p>Диспетчер по описанию поломки называет «потолок» — сумму, выше которой вы не платите ничего. Если по факту работ нужно меньше — платите меньше. Больше — это уже наш риск.</p>
+    </details>
+    <details class="faq__item">
+      <summary><span>Как работает гарантия 24 месяца?</span><span class="faq__plus" aria-hidden="true"></span></summary>
+      <p>Каждый ремонт привязан к QR-карточке в личном кабинете. Если в течение 24 месяцев та же поломка повторяется — мастер приезжает бесплатно. После трёх неудачных попыток возвращаем деньги.</p>
+    </details>
+    <details class="faq__item">
+      <summary><span>Откуда берутся детали?</span><span class="faq__plus" aria-hidden="true"></span></summary>
+      <p>Только оригинал или авторизованные аналоги (Bosch, Samsung, LG, Apple, HP и др.). Серийный номер каждой детали попадает в карточку — это защищает от пересорта.</p>
+    </details>
+    <details class="faq__item">
+      <summary><span>Работаете в выходные и ночью?</span><span class="faq__plus" aria-hidden="true"></span></summary>
+      <p>Заявки принимаем 24/7, мастера выезжают с 07:00 до 23:00. Ночные выезды — по согласованию, действует ночной коэффициент 1,3.</p>
+    </details>
+    <details class="faq__item">
+      <summary><span>В каких городах работает QuickFix?</span><span class="faq__plus" aria-hidden="true"></span></summary>
+      <p>Москва, Санкт-Петербург, Казань, Екатеринбург, Новосибирск, Краснодар. Список городов расширяется — оставьте заявку, подскажем по вашему адресу.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__top">
+    <a href="#top" class="footer__logo">QuickFix<span>/repair</span></a>
+    <nav class="footer__nav" aria-label="Подвал">
+      <a href="#how">Как это работает</a>
+      <a href="#catalog">Что чиним</a>
+      <a href="#tracker">Статус</a>
+      <a href="#warranty">Гарантия</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="footer__contacts">
+      <a href="tel:+78005550490">+7 800 555-04-90</a>
+      <a href="mailto:hi@quickfix-repair.example">hi@quickfix-repair.example</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 QuickFix Repair. ИП Иванов И. И., ОГРНИП 304770000000000.</span>
+    <span>Цены на сайте не являются публичной офертой.</span>
+  </div>
+</footer>
+
+<a href="#order" class="sticky-cta" data-sticky-cta aria-label="Открыть форму заявки">
+  <span class="sticky-cta__dot" aria-hidden="true"></span>
+  <span class="sticky-cta__text">Вызвать мастера</span>
+  <span class="sticky-cta__time">≈ 87 мин</span>
+</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>

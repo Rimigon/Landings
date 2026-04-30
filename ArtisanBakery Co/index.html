@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#3a2618" />
+<title>Хлебная мастерская «Полба и Печь» — крафтовая пекарня с предзаказом и трекингом свежести</title>
+<meta name="description" content="Длинное брожение, дровяная печь, мука с локальных мельниц. Предзаказ хлеба и выпечки на завтра, журнал рецептов, живой трекер свежести каждой партии." />
+<link rel="canonical" href="https://polba-i-pech.example/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:site_name" content="Полба и Печь" />
+<meta property="og:title" content="Полба и Печь — крафтовая пекарня и журнал рецептов" />
+<meta property="og:description" content="Печём на закваске и в дровяной печи. Предзаказ на завтра, трекинг свежести партий, открытые рецепты." />
+<meta property="og:url" content="https://polba-i-pech.example/" />
+<meta property="og:image" content="https://polba-i-pech.example/og.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Полба и Печь — крафтовая пекарня" />
+<meta name="twitter:description" content="Хлеб длинного брожения, предзаказ и трекинг партий." />
+<meta name="twitter:image" content="https://polba-i-pech.example/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Полба и Печь",
+  "image": "https://polba-i-pech.example/og.jpg",
+  "url": "https://polba-i-pech.example/",
+  "telephone": "+7 495 000-00-00",
+  "priceRange": "₽₽",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Мукомольная, 7",
+    "addressLocality": "Москва",
+    "postalCode": "115054",
+    "addressCountry": "RU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 55.731, "longitude": 37.628 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "09:00", "closes": "21:00" }
+  ],
+  "servesCuisine": "Хлеб, выпечка, кондитерские изделия",
+  "acceptsReservations": "True",
+  "sameAs": ["https://t.me/polba_i_pech","https://instagram.com/polba_i_pech"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="topbar" role="banner">
+  <div class="topbar__inner">
+    <a class="brand" href="#hero" aria-label="Полба и Печь — на главную">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="36" height="36" focusable="false">
+          <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M14 38c4-10 14-16 18-16s14 6 18 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M22 38c2-6 8-10 10-10s8 4 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 22l4-8 4 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand__name">
+        <span class="brand__line1">Полба</span>
+        <span class="brand__amp">и</span>
+        <span class="brand__line2">Печь</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Главное меню">
+      <a href="#catalog">Каталог</a>
+      <a href="#freshness">Свежесть</a>
+      <a href="#recipes">Рецепты</a>
+      <a href="#process">Цех</a>
+      <a href="#visit">Зайти</a>
+    </nav>
+
+    <a class="cta cta--ink" href="#preorder">
+      <span>Предзаказ на завтра</span>
+      <span class="cta__stamp" aria-hidden="true">07:30</span>
+    </a>
+
+    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <a href="#catalog">Каталог</a>
+    <a href="#freshness">Свежесть партий</a>
+    <a href="#recipes">Рецепты</a>
+    <a href="#process">Цех и закваска</a>
+    <a href="#visit">Как добраться</a>
+    <a class="cta cta--ink" href="#preorder">Предзаказ</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ========== HERO ========== -->
+<section id="hero" class="hero" aria-labelledby="hero-h1">
+  <div class="hero__paper" aria-hidden="true"></div>
+
+  <div class="hero__grid">
+    <div class="hero__meta">
+      <span class="kicker">с 2014 · Москва · печь №3</span>
+      <span class="kicker kicker--mono">партия 248 в работе</span>
+    </div>
+
+    <h1 id="hero-h1" class="hero__h1">
+      <span class="word word--serif">Хлеб,</span>
+      <span class="word word--script">который</span>
+      <span class="word word--serif word--ital">помнит</span>
+      <span class="word word--big">руки.</span>
+    </h1>
+
+    <p class="hero__lede">
+      Длинное брожение от 18 часов, дровяная печь на берёзовых поленьях, мука с трёх локальных мельниц. Без улучшителей, без спешки, без вчерашнего теста. Закажите сегодня — заберите тёплым в 07:30.
+    </p>
+
+    <div class="hero__ctas">
+      <a class="btn btn--primary" href="#preorder">
+        Оформить предзаказ
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#freshness">Узнать, что в печи прямо сейчас</a>
+    </div>
+
+    <ul class="hero__trust" aria-label="Преимущества">
+      <li><strong>18+ ч</strong><span>холодная ферментация</span></li>
+      <li><strong>3</strong><span>мельницы-партнёра</span></li>
+      <li><strong>0</strong><span>улучшителей и маргарина</span></li>
+      <li><strong>07:30</strong><span>самовынос — горячим</span></li>
+    </ul>
+
+    <figure class="hero__visual" aria-hidden="true">
+      <div class="loaf">
+        <span class="loaf__crumb"></span>
+        <span class="loaf__slash"></span>
+        <span class="loaf__slash loaf__slash--2"></span>
+        <span class="loaf__slash loaf__slash--3"></span>
+      </div>
+      <span class="hero__stamp">№248</span>
+      <span class="hero__price">от 240 ₽</span>
+      <span class="hero__handwritten">«сегодня — деревенский на ржаной закваске»</span>
+    </figure>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>деревенский 1кг</span><span>·</span>
+      <span>полбяной с фундуком</span><span>·</span>
+      <span>багет на пулише</span><span>·</span>
+      <span>чиабатта с оливками</span><span>·</span>
+      <span>ржаной 100%</span><span>·</span>
+      <span>фокачча розмарин</span><span>·</span>
+      <span>бриошь с малиной</span><span>·</span>
+      <span>деревенский 1кг</span><span>·</span>
+      <span>полбяной с фундуком</span><span>·</span>
+      <span>багет на пулише</span><span>·</span>
+      <span>чиабатта с оливками</span><span>·</span>
+      <span>ржаной 100%</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT / PHILOSOPHY ========== -->
+<section id="about" class="about" aria-labelledby="about-h2">
+  <div class="about__col about__col--text">
+    <span class="section-num">01 — философия</span>
+    <h2 id="about-h2" class="h2">
+      Мы не пекарня <em>быстрого</em> хлеба.<br/>
+      Мы — мастерская <span class="ink">медленного</span>.
+    </h2>
+    <p class="lead">
+      Тесто у нас живёт дольше, чем средняя смена в супермаркете. Мы кормим закваски по имени — Марфа, Тихон и Глаша — каждое утро в шесть, а печь топим берёзой за два часа до первой посадки.
+    </p>
+    <p>
+      Этот сайт — не витрина. Это окно в цех. Здесь видно, какая партия сейчас в расстойке, во сколько откроется люк печи и почему сегодняшний деревенский темнее вчерашнего (виноват мокрый дуб в дровах).
+    </p>
+    <a class="link-arrow" href="#process">Посмотреть, как печём <span aria-hidden="true">→</span></a>
+  </div>
+
+  <aside class="about__col about__col--card">
+    <div class="card-tag">
+      <span class="card-tag__label">подписано пекарем</span>
+      <h3 class="card-tag__title">Сергей Обухов</h3>
+      <p class="card-tag__role">главный пекарь · 19 лет у печи</p>
+      <p class="card-tag__quote">«Хороший хлеб не нужно объяснять. Его нужно разломить пополам, услышать корку и не торопиться.»</p>
+      <span class="card-tag__sign">— С.О.</span>
+    </div>
+  </aside>
+</section>
+
+<!-- ========== FRESHNESS TRACKER ========== -->
+<section id="freshness" class="freshness" aria-labelledby="freshness-h2">
+  <header class="freshness__head">
+    <span class="section-num">02 — живой трекер</span>
+    <h2 id="freshness-h2" class="h2">
+      Что <span class="ink">сейчас</span> в печи.<br/>
+      Без округлений, без «примерно».
+    </h2>
+    <p class="lead">
+      Каждая партия — со своим номером, временем замеса и точным временем выхода из печи. Когда таймер обнуляется, партия уже на витрине. Через четыре часа после выпечки она уходит в «вчерашнюю полку» со скидкой 40%.
+    </p>
+  </header>
+
+  <div class="batches" role="list">
+    <article class="batch" data-bake-at="07:30" role="listitem">
+      <header class="batch__head">
+        <span class="batch__num">№248</span>
+        <span class="batch__status batch__status--oven">в печи</span>
+      </header>
+      <h3 class="batch__title">Деревенский на полбяной закваске</h3>
+      <dl class="batch__meta">
+        <div><dt>замес</dt><dd>02:14</dd></div>
+        <div><dt>выход</dt><dd id="t-248">07:30</dd></div>
+        <div><dt>партия</dt><dd>42 шт</dd></div>
+      </dl>
+      <div class="batch__bar"><span class="batch__fill" style="--p:78%"></span></div>
+      <p class="batch__note">Корка тёмно-карамельная, мякиш с крупными альвеолами. Хорошо подходит к супу-крему и к сыру с плесенью.</p>
+    </article>
+
+    <article class="batch batch--soon" data-bake-at="09:10" role="listitem">
+      <header class="batch__head">
+        <span class="batch__num">№249</span>
+        <span class="batch__status batch__status--proof">расстойка</span>
+      </header>
+      <h3 class="batch__title">Багет на пулише</h3>
+      <dl class="batch__meta">
+        <div><dt>замес</dt><dd>04:40</dd></div>
+        <div><dt>выход</dt><dd id="t-249">09:10</dd></div>
+        <div><dt>партия</dt><dd>60 шт</dd></div>
+      </dl>
+      <div class="batch__bar"><span class="batch__fill" style="--p:42%"></span></div>
+      <p class="batch__note">Хрустящая корка, открытый мякиш. Лимит самовыноса — 6 штук в одни руки до 11:00.</p>
+    </article>
+
+    <article class="batch batch--fresh" data-bake-at="11:45" role="listitem">
+      <header class="batch__head">
+        <span class="batch__num">№250</span>
+        <span class="batch__status batch__status--mix">замес</span>
+      </header>
+      <h3 class="batch__title">Чиабатта с оливками каламата</h3>
+      <dl class="batch__meta">
+        <div><dt>замес</dt><dd>06:55</dd></div>
+        <div><dt>выход</dt><dd id="t-250">11:45</dd></div>
+        <div><dt>партия</dt><dd>28 шт</dd></div>
+      </dl>
+      <div class="batch__bar"><span class="batch__fill" style="--p:14%"></span></div>
+      <p class="batch__note">Олива каламата 18%, оливковое масло Каркинья. Отлично к брускетте и томатному сабайону.</p>
+    </article>
+
+    <article class="batch batch--done" role="listitem">
+      <header class="batch__head">
+        <span class="batch__num">№247</span>
+        <span class="batch__status batch__status--ready">на витрине</span>
+      </header>
+      <h3 class="batch__title">Ржаной 100% с тмином</h3>
+      <dl class="batch__meta">
+        <div><dt>замес</dt><dd>вчера 19:20</dd></div>
+        <div><dt>выход</dt><dd>06:05</dd></div>
+        <div><dt>остаток</dt><dd>7 шт</dd></div>
+      </dl>
+      <div class="batch__bar"><span class="batch__fill" style="--p:100%"></span></div>
+      <p class="batch__note">Плотный, влажный мякиш. Раскрывается на следующий день — берите с запасом.</p>
+    </article>
+  </div>
+
+  <p class="freshness__legend">
+    <span class="dot dot--mix"></span> замес ·
+    <span class="dot dot--proof"></span> расстойка ·
+    <span class="dot dot--oven"></span> в печи ·
+    <span class="dot dot--ready"></span> на витрине ·
+    <span class="dot dot--done"></span> «вчерашняя полка» −40%
+  </p>
+</section>
+
+<!-- ========== CATALOG / PREORDER ========== -->
+<section id="catalog" class="catalog" aria-labelledby="catalog-h2">
+  <header class="catalog__head">
+    <span class="section-num">03 — каталог</span>
+    <h2 id="catalog-h2" class="h2">
+      Что испечь <em>для вас</em><br/>
+      <span class="ink">завтра к 07:30.</span>
+    </h2>
+    <p class="lead">Отметьте позиции — соберём короб и пришлём ссылку для оплаты в Telegram. Минимальный предзаказ — 600 ₽.</p>
+  </header>
+
+  <ul class="filters" role="tablist" aria-label="Фильтр каталога">
+    <li><button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Всё меню</button></li>
+    <li><button class="filter" data-filter="bread" role="tab" aria-selected="false">Хлеб</button></li>
+    <li><button class="filter" data-filter="pastry" role="tab" aria-selected="false">Выпечка</button></li>
+    <li><button class="filter" data-filter="sweet" role="tab" aria-selected="false">Сладкое</button></li>
+    <li><button class="filter" data-filter="vegan" role="tab" aria-selected="false">Постное</button></li>
+  </ul>
+
+  <div class="goods" id="goods">
+
+    <article class="good" data-cat="bread">
+      <div class="good__sticker">бестселлер</div>
+      <h3 class="good__title">Деревенский на полбяной закваске</h3>
+      <p class="good__desc">Полба 30%, пшеница Т80, медленное брожение 22 часа. Вес ~950 г.</p>
+      <footer class="good__foot">
+        <span class="good__price">320 ₽</span>
+        <button class="good__add" data-id="b1" data-name="Деревенский" data-price="320" aria-label="Добавить деревенский">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="bread">
+      <h3 class="good__title">Ржаной 100% с тмином</h3>
+      <p class="good__desc">Цельнозерновая ржаная мука, ржаная закваска, патока. Без пшеницы.</p>
+      <footer class="good__foot">
+        <span class="good__price">280 ₽</span>
+        <button class="good__add" data-id="b2" data-name="Ржаной с тмином" data-price="280">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="bread">
+      <h3 class="good__title">Багет на пулише</h3>
+      <p class="good__desc">Сутки на холодной ферментации, тонкая хрустящая корка.</p>
+      <footer class="good__foot">
+        <span class="good__price">160 ₽</span>
+        <button class="good__add" data-id="b3" data-name="Багет" data-price="160">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="bread vegan">
+      <h3 class="good__title">Чиабатта с оливками</h3>
+      <p class="good__desc">Олива каламата, масло Каркинья, морская соль Гурандэ.</p>
+      <footer class="good__foot">
+        <span class="good__price">240 ₽</span>
+        <button class="good__add" data-id="b4" data-name="Чиабатта" data-price="240">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="pastry">
+      <div class="good__sticker">новинка</div>
+      <h3 class="good__title">Круассан на ферме «Ла Кампань»</h3>
+      <p class="good__desc">81% сливочное масло, 27 слоёв, 18 часов в холоде.</p>
+      <footer class="good__foot">
+        <span class="good__price">210 ₽</span>
+        <button class="good__add" data-id="p1" data-name="Круассан" data-price="210">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="pastry">
+      <h3 class="good__title">Бриошь с малиной</h3>
+      <p class="good__desc">Жирность 32%, начинка из карельской малины, ваниль Бурбон.</p>
+      <footer class="good__foot">
+        <span class="good__price">260 ₽</span>
+        <button class="good__add" data-id="p2" data-name="Бриошь с малиной" data-price="260">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="sweet">
+      <h3 class="good__title">Канеле бордоский</h3>
+      <p class="good__desc">Карамельная корочка, заварной мякиш с ромом и ванилью.</p>
+      <footer class="good__foot">
+        <span class="good__price">190 ₽</span>
+        <button class="good__add" data-id="s1" data-name="Канеле" data-price="190">+ в короб</button>
+      </footer>
+    </article>
+
+    <article class="good" data-cat="sweet vegan">
+      <h3 class="good__title">Тарт «груша — миндаль»</h3>
+      <p class="good__desc">Песочное тесто на оливковом масле, груша конференц, миндальный франжипан.</p>
+      <footer class="good__foot">
+        <span class="good__price">340 ₽</span>
+        <button class="good__add" data-id="s2" data-name="Тарт груша-миндаль" data-price="340">+ в короб</button>
+      </footer>
+    </article>
+
+  </div>
+</section>
+
+<!-- ========== PREORDER FORM (sticky basket) ========== -->
+<section id="preorder" class="preorder" aria-labelledby="preorder-h2">
+  <div class="preorder__paper" aria-hidden="true"></div>
+
+  <div class="preorder__inner">
+    <div class="preorder__copy">
+      <span class="section-num">04 — предзаказ</span>
+      <h2 id="preorder-h2" class="h2">
+        Соберите короб.<br/>
+        <span class="ink">Заберите в 07:30.</span>
+      </h2>
+      <p class="lead">
+        Мы испечём ровно к вашему времени. Не «партия из тридцати, может что-то останется», а именно ваши шесть багетов и буханка ржаного — с биркой и временем.
+      </p>
+      <ul class="bullets">
+        <li>Самовынос на ул. Мукомольной, 7. Доставка по ЦАО — от 980 ₽.</li>
+        <li>Оплата в Telegram-боте после подтверждения короба.</li>
+        <li>Отмена бесплатно до 22:00 предыдущего дня.</li>
+      </ul>
+    </div>
+
+    <form class="form" id="preorderForm" novalidate aria-labelledby="preorder-h2">
+      <div class="form__row">
+        <label class="field">
+          <span class="field__label">Как вас зовут</span>
+          <input name="name" type="text" autocomplete="name" required minlength="2" placeholder="Например, Анна" />
+          <span class="field__err" aria-live="polite"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Телефон или Telegram</span>
+          <input name="contact" type="text" autocomplete="tel" required placeholder="+7 999 000-00-00 или @anna" />
+          <span class="field__err" aria-live="polite"></span>
+        </label>
+      </div>
+
+      <fieldset class="form__when">
+        <legend class="field__label">Когда забираете</legend>
+        <label class="chip"><input type="radio" name="slot" value="07:30" checked /> <span>07:30</span></label>
+        <label class="chip"><input type="radio" name="slot" value="09:30" /> <span>09:30</span></label>
+        <label class="chip"><input type="radio" name="slot" value="12:00" /> <span>12:00</span></label>
+        <label class="chip"><input type="radio" name="slot" value="18:00" /> <span>18:00</span></label>
+      </fieldset>
+
+      <div class="basket" aria-live="polite">
+        <h3 class="basket__title">Ваш короб</h3>
+        <ul class="basket__list" id="basketList"><li class="basket__empty">Пока пусто. Добавьте позиции из каталога.</li></ul>
+        <div class="basket__sum">
+          <span>Итого</span>
+          <strong><span id="basketSum">0</span> ₽</strong>
+        </div>
+      </div>
+
+      <label class="field field--checkbox">
+        <input type="checkbox" name="agree" required />
+        <span>Согласен с обработкой данных и публичной офертой пекарни.</span>
+      </label>
+
+      <button class="btn btn--primary btn--lg" type="submit">
+        Отправить предзаказ
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="form__hint">После отправки получите ссылку на оплату в Telegram. Ответ — в течение 12 минут с 06:00 до 21:00.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ========== RECIPES JOURNAL ========== -->
+<section id="recipes" class="recipes" aria-labelledby="recipes-h2">
+  <header class="recipes__head">
+    <span class="section-num">05 — журнал</span>
+    <h2 id="recipes-h2" class="h2">
+      Открытые <em>рецепты</em>.<br/>
+      Печём дома — <span class="ink">без секретов.</span>
+    </h2>
+    <p class="lead">Мы не верим в «фирменные тайны»: хороший хлеб делается временем, мукой и руками. Заберите рецепт — попробуйте на своей кухне.</p>
+  </header>
+
+  <div class="journal">
+    <article class="recipe">
+      <span class="recipe__num">№01</span>
+      <h3 class="recipe__title">Деревенский на полбяной закваске</h3>
+      <p class="recipe__time">22 часа · 4 этапа · уровень: средний</p>
+      <p class="recipe__excerpt">«Полба боится тепла и любит холод. Замешайте вечером, оставьте до утра, и тесто всё сделает за вас.» — С.О.</p>
+      <a class="link-arrow" href="#" aria-label="Открыть рецепт деревенского хлеба">Читать рецепт <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="recipe recipe--wide">
+      <span class="recipe__num">№02</span>
+      <h3 class="recipe__title">Чиабатта без замеса</h3>
+      <p class="recipe__time">18 часов · 2 этапа · уровень: для новичка</p>
+      <p class="recipe__excerpt">Тот самый рецепт, с которого начинают пекари. 4 ингредиента, ноль усилий, открытый мякиш и тонкая хрустящая корка. Если у вас не получится — мы лично вернём 320 ₽ за буханку.</p>
+      <a class="link-arrow" href="#">Читать рецепт <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="recipe">
+      <span class="recipe__num">№03</span>
+      <h3 class="recipe__title">Бриошь, как у бабушки в Лионе</h3>
+      <p class="recipe__time">14 часов · 5 этапов · уровень: продвинутый</p>
+      <p class="recipe__excerpt">82% сливочное масло, ваниль Бурбон, два подъёма — и завтрак, ради которого встают в шесть.</p>
+      <a class="link-arrow" href="#">Читать рецепт <span aria-hidden="true">→</span></a>
+    </article>
+
+    <article class="recipe">
+      <span class="recipe__num">№04</span>
+      <h3 class="recipe__title">Ржаная закваска с нуля</h3>
+      <p class="recipe__time">7 дней · ежедневно по 5 минут</p>
+      <p class="recipe__excerpt">Календарь подкормок, фото-дневник пузырей и три способа спасти закваску, если она «легла».</p>
+      <a class="link-arrow" href="#">Читать рецепт <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- ========== PROCESS ========== -->
+<section id="process" class="process" aria-labelledby="process-h2">
+  <header class="process__head">
+    <span class="section-num">06 — цех</span>
+    <h2 id="process-h2" class="h2">
+      Один день <span class="ink">в мастерской.</span>
+    </h2>
+    <p class="lead">От первой подкормки закваски в 04:00 до последней буханки в 20:30 — без пропусков.</p>
+  </header>
+
+  <ol class="timeline">
+    <li class="step">
+      <span class="step__time">04:00</span>
+      <h3 class="step__title">Кормим Марфу, Тихона и Глашу</h3>
+      <p>Три закваски — три характера. Глаша любит ржаную муку грубого помола, Тихон требователен к температуре воды.</p>
+    </li>
+    <li class="step">
+      <span class="step__time">05:30</span>
+      <h3 class="step__title">Замес и автолиз</h3>
+      <p>Холодная вода 12°C, мука с трёх мельниц, 40 минут отдыха без соли — глютен раскрывается сам.</p>
+    </li>
+    <li class="step">
+      <span class="step__time">06:45</span>
+      <h3 class="step__title">Топим печь берёзой</h3>
+      <p>Под уходит на 320°C за два часа. Никакой газовой подмены — только живой огонь.</p>
+    </li>
+    <li class="step">
+      <span class="step__time">07:30</span>
+      <h3 class="step__title">Первая выемка</h3>
+      <p>Открываем дверь — и забирают первые предзаказы. Корка ещё «поёт».</p>
+    </li>
+    <li class="step">
+      <span class="step__time">14:00</span>
+      <h3 class="step__title">Дневная смена</h3>
+      <p>Багеты, фокачча, бриошь. С 14:00 до 17:00 — мастер-класс «вторая жизнь хлеба».</p>
+    </li>
+    <li class="step">
+      <span class="step__time">19:00</span>
+      <h3 class="step__title">Вечерняя полка −40%</h3>
+      <p>Ничего не выбрасываем. Что не разобрали — на «полку вчерашнего» или на сухарики «Обуховские».</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section id="reviews" class="reviews" aria-labelledby="reviews-h2">
+  <header class="reviews__head">
+    <span class="section-num">07 — голоса</span>
+    <h2 id="reviews-h2" class="h2">«Мы возвращаемся <em>каждую</em> субботу.»</h2>
+  </header>
+
+  <div class="reviews__grid">
+    <figure class="review">
+      <blockquote>
+        <p>Заказала короб на семейный завтрак. Привезли тёплым, в крафте, с бумажной биркой и от руки подписанной запиской. Дочка съела половину багета прямо в подъезде.</p>
+      </blockquote>
+      <figcaption><strong>Анна Г.</strong><span>постоянный гость, 47 заказов</span></figcaption>
+    </figure>
+
+    <figure class="review review--accent">
+      <blockquote>
+        <p>Это единственный в Москве хлеб, который я могу есть на четвёртый день. Мякиш не каменеет, корка не превращается в фанеру. Понимаю, что это длинное брожение, но всё равно магия.</p>
+      </blockquote>
+      <figcaption><strong>Игорь М.</strong><span>шеф-повар «Сольца»</span></figcaption>
+    </figure>
+
+    <figure class="review">
+      <blockquote>
+        <p>Понравилось, что видно партию: подъехала к 09:10, как и было в трекере, и багет был в печи буквально пять минут назад. Это честнее любого маркетинга.</p>
+      </blockquote>
+      <figcaption><strong>Лиза К.</strong><span>пишет про еду, @lizaeats</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ========== VISIT / CONTACTS ========== -->
+<section id="visit" class="visit" aria-labelledby="visit-h2">
+  <div class="visit__copy">
+    <span class="section-num">08 — зайти</span>
+    <h2 id="visit-h2" class="h2">Заходите без повода.<br/><span class="ink">Чай — за счёт пекарни.</span></h2>
+    <p class="lead">Если просто хочется понюхать свежий хлеб и посмотреть, как загружается печь, — приходите. Мы покажем, нальём чай и расскажем, чем сегодня кормили Марфу.</p>
+
+    <dl class="visit__meta">
+      <div><dt>Адрес</dt><dd>Москва, ул. Мукомольная, 7 (вход с торца)</dd></div>
+      <div><dt>Часы</dt><dd>вт–пт 08:00–20:00 · сб–вс 09:00–21:00 · пн — кормим закваски</dd></div>
+      <div><dt>Телефон</dt><dd><a href="tel:+74950000000">+7 495 000-00-00</a></dd></div>
+      <div><dt>Telegram</dt><dd><a href="https://t.me/polba_i_pech">@polba_i_pech</a></dd></div>
+    </dl>
+  </div>
+
+  <div class="visit__map" id="map" aria-label="Карта: ул. Мукомольная, 7, Москва">
+    <iframe
+      title="Карта пекарни на OpenStreetMap"
+      loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=37.620%2C55.726%2C37.636%2C55.736&amp;layer=mapnik&amp;marker=55.731%2C37.628"
+      style="width:100%;height:100%;border:0"></iframe>
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="news" aria-labelledby="news-h2">
+  <h2 id="news-h2" class="h2 h2--center">Раз в неделю — письмо <em>пекаря.</em></h2>
+  <p class="lead lead--center">Что нового на закваске, какой хлеб попробовать, один открытый рецепт. Без рекламы и каши в почте.</p>
+
+  <form class="news__form" id="newsForm" novalidate>
+    <label class="visually-hidden" for="newsEmail">Email</label>
+    <input id="newsEmail" type="email" name="email" required placeholder="email, по которому вас не достанет реклама" />
+    <button class="btn btn--primary" type="submit">Подписаться</button>
+  </form>
+  <p class="news__small">Отписка — в один клик в каждом письме.</p>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="brand__line1">Полба</span><span class="brand__amp">и</span><span class="brand__line2">Печь</span>
+      <p>Хлебная мастерская. Печём с 2014 года.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Подвал">
+      <a href="#catalog">Каталог</a>
+      <a href="#freshness">Трекер партий</a>
+      <a href="#recipes">Рецепты</a>
+      <a href="#process">Цех</a>
+      <a href="#visit">Контакты</a>
+    </nav>
+    <div class="footer__legal">
+      <a href="#">Оферта</a>
+      <a href="#">Политика данных</a>
+      <p>© 2014–2026 «Полба и Печь». ИНН 7700000000.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-cta" href="#preorder" aria-label="К предзаказу">
+  <span>Короб на завтра</span>
+  <span class="sticky-cta__count" id="stickyCount" hidden>0</span>
+</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>

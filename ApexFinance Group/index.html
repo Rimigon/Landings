@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0B0F14" />
+<meta name="color-scheme" content="dark light" />
+
+<title>ApexFinance Group — финансовый консалтинг для CFO и собственников</title>
+<meta name="description" content="ApexFinance Group: аудит, моделирование и сопровождение сделок. Калькулятор ROI, защищённый клиентский портал, отчёты в PDF и CSV. 12 лет опыта, 480 проектов." />
+<link rel="canonical" href="https://apexfinance.example/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ApexFinance Group — капитал требует ясности" />
+<meta property="og:description" content="Консалтинг для собственников и финансовых директоров. Аудит за 24 часа, ROI-калькулятор, клиентский портал." />
+<meta property="og:url" content="https://apexfinance.example/" />
+<meta property="og:image" content="https://apexfinance.example/og.jpg" />
+<meta property="og:locale" content="ru_RU" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ApexFinance Group" />
+<meta name="twitter:description" content="Финансовый консалтинг. Решения, а не презентации." />
+<meta name="twitter:image" content="https://apexfinance.example/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700;9..144,900&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<link rel="stylesheet" href="style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "ApexFinance Group",
+  "url": "https://apexfinance.example/",
+  "logo": "https://apexfinance.example/logo.svg",
+  "image": "https://apexfinance.example/og.jpg",
+  "description": "Финансовый консалтинг: аудит, моделирование, сопровождение сделок, ROI-калькулятор и клиентский портал.",
+  "areaServed": "RU",
+  "telephone": "+7 495 000-00-00",
+  "email": "office@apexfinance.example",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Пресненская наб., 12, БЦ Башня Федерация",
+    "addressLocality": "Москва",
+    "postalCode": "123100",
+    "addressCountry": "RU"
+  },
+  "openingHours": "Mo-Fr 09:00-19:00",
+  "priceRange": "₽₽₽",
+  "sameAs": [
+    "https://t.me/apexfinance",
+    "https://www.linkedin.com/company/apexfinance"
+  ]
+}
+</script>
+</head>
+<body id="top" class="no-js">
+<script>document.body.classList.remove('no-js');document.body.classList.add('js');</script>
+
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<div class="reading-bar" aria-hidden="true"><span id="readingProgress"></span></div>
+
+<header class="site-header" data-stick>
+  <div class="wrap header-grid">
+    <a href="#top" class="logo" aria-label="ApexFinance Group, на главный">
+      <span class="logo__mark">AF<i>/</i>G</span>
+      <span class="logo__sub">ApexFinance Group</span>
+    </a>
+    <nav class="nav" aria-label="Главная навигация">
+      <a href="#approach">Подход</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#portal">Портал</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+    <a href="#contact" class="btn btn--primary nav__cta">Аудит за 24 часа</a>
+    <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobileNav" class="mobile-nav" hidden>
+    <a href="#approach">Подход</a>
+    <a href="#calculator">Калькулятор</a>
+    <a href="#cases">Кейсы</a>
+    <a href="#portal">Портал</a>
+    <a href="#contact">Контакт</a>
+    <a href="#contact" class="btn btn--primary">Аудит за 24 часа</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section id="hero" class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero__grid">
+      <div class="hero__meta" data-reveal>
+        <span class="kicker">Финансовый консалтинг · Москва · с 2014</span>
+        <span class="kicker kicker--mute">Issue №<span id="issueNo">04.30</span></span>
+      </div>
+
+      <h1 id="heroTitle" class="hero__title" data-reveal>
+        <span class="line line--a">Капитал</span>
+        <span class="line line--b"><em>требует</em></span>
+        <span class="line line--c">ясности.</span>
+        <span class="line line--d">Мы её <u>доставляем</u>.</span>
+      </h1>
+
+      <p class="hero__lead" data-reveal>
+        ApexFinance Group — консалтинг для собственников и финансовых директоров,
+        которым нужны решения, а не презентации. Аудит, модели, сделки, защита капитала.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#contact" class="btn btn--primary btn--lg">Запросить аудит за 24 часа</a>
+        <a href="#calculator" class="btn btn--ghost btn--lg">Рассчитать ROI</a>
+      </div>
+
+      <aside class="hero__aside" aria-label="Ключевые показатели">
+        <div class="ticker" role="status" aria-live="polite">
+          <div class="ticker__row">
+            <b>12</b><span>лет на рынке</span>
+          </div>
+          <div class="ticker__row">
+            <b>480</b><span>проектов закрыто</span>
+          </div>
+          <div class="ticker__row">
+            <b>1.2 млрд ₽</b><span>под сопровождением</span>
+          </div>
+          <div class="ticker__row ticker__row--accent">
+            <b id="liveRate">— —</b><span>средний возврат портфеля YTD</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="hero__seal" aria-hidden="true">
+        <svg viewBox="0 0 200 200" width="100%" height="100%">
+          <defs>
+            <path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+          </defs>
+          <text font-family="JetBrains Mono" font-size="11" letter-spacing="4" fill="currentColor">
+            <textPath href="#circ">APEXFINANCE · GROUP · CAPITAL · CLARITY · CONFIDENCE · </textPath>
+          </text>
+          <circle cx="100" cy="100" r="6" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>M&amp;A</span><i>·</i><span>FP&amp;A</span><i>·</i><span>Налоговое моделирование</span><i>·</i>
+        <span>Привлечение долга</span><i>·</i><span>IFRS / РСБУ</span><i>·</i><span>Pre-IPO</span><i>·</i>
+        <span>Управленческий учёт</span><i>·</i><span>Защита активов</span><i>·</i>
+        <span>M&amp;A</span><i>·</i><span>FP&amp;A</span><i>·</i><span>Налоговое моделирование</span><i>·</i>
+        <span>Привлечение долга</span><i>·</i><span>IFRS / РСБУ</span><i>·</i><span>Pre-IPO</span><i>·</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="approach" aria-labelledby="approachTitle">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="kicker">01 — Подход</span>
+        <h2 id="approachTitle" class="section-title">
+          Метод <span class="num">4D</span>
+          <small>четыре фазы, в которых мы превращаем хаос отчётности в управляемые решения</small>
+        </h2>
+      </header>
+
+      <ol class="cards" role="list">
+        <li class="card card--a" data-reveal>
+          <span class="card__num">01</span>
+          <h3>Discover</h3>
+          <p>Полный аудит контуров: P&amp;L, кассовые разрывы, налоговая позиция, KPI команды. Дашборд за 5 рабочих дней.</p>
+          <ul><li>Финансовая диагностика</li><li>Налоговый чек-лист</li><li>Карта рисков</li></ul>
+        </li>
+        <li class="card card--b" data-reveal>
+          <span class="card__num">02</span>
+          <h3>Design</h3>
+          <p>Финансовая модель на 36 месяцев со сценариями. Учёт ковенант, мультивалютности и сезонности.</p>
+          <ul><li>3-statement модель</li><li>Сценарный анализ</li><li>Stress-test</li></ul>
+        </li>
+        <li class="card card--c" data-reveal>
+          <span class="card__num">03</span>
+          <h3>Deploy</h3>
+          <p>Запуск управленческого учёта, регламентов и dashboards. Команда работает по факту, а не по интуиции.</p>
+          <ul><li>BI-витрины</li><li>Регламенты</li><li>Обучение CFO-офиса</li></ul>
+        </li>
+        <li class="card card--d" data-reveal>
+          <span class="card__num">04</span>
+          <h3>Defend</h3>
+          <p>Сопровождение сделок, due diligence, защита перед банками и инвесторами. Ваш интерес — наш мандат.</p>
+          <ul><li>M&amp;A buy/sell-side</li><li>Привлечение долга</li><li>Подготовка к Pre-IPO</li></ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator" class="calc" aria-labelledby="calcTitle">
+    <div class="wrap calc__grid">
+      <header class="section-head section-head--inline">
+        <span class="kicker">02 — Калькулятор</span>
+        <h2 id="calcTitle" class="section-title">
+          Сколько вернёт <em>ваш капитал</em> за год работы с нами
+        </h2>
+        <p class="section-sub">
+          Модель на основе 480 закрытых проектов. Сдвиньте параметры — увидите консервативную, базовую и
+          оптимистичную оценку прироста к чистой прибыли. Это оценка, а не оферта.
+        </p>
+      </header>
+
+      <form class="calc__form" id="roiForm" novalidate aria-describedby="roiNote">
+        <div class="field">
+          <label for="revenue">Годовая выручка, ₽</label>
+          <input type="range" id="revenue" min="10000000" max="2000000000" step="5000000" value="120000000" />
+          <output for="revenue" id="revenueOut">120 000 000 ₽</output>
+        </div>
+
+        <div class="field">
+          <label for="margin">Маржинальность EBITDA, %</label>
+          <input type="range" id="margin" min="2" max="45" step="1" value="14" />
+          <output for="margin" id="marginOut">14 %</output>
+        </div>
+
+        <div class="field">
+          <label for="industry">Отрасль</label>
+          <select id="industry">
+            <option value="1.00">Производство</option>
+            <option value="1.15" selected>Ритейл и e-commerce</option>
+            <option value="1.25">IT / SaaS</option>
+            <option value="0.92">Стройка и девелопмент</option>
+            <option value="1.05">Услуги B2B</option>
+            <option value="1.10">FMCG</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="scope">Глубина мандата</label>
+          <div class="chips" role="radiogroup" aria-labelledby="scopeLabel">
+            <input type="radio" id="s1" name="scope" value="0.6" /><label for="s1">Аудит</label>
+            <input type="radio" id="s2" name="scope" value="1.0" checked /><label for="s2">Аудит + Модель</label>
+            <input type="radio" id="s3" name="scope" value="1.4" /><label for="s3">Полное сопровождение</label>
+          </div>
+        </div>
+
+        <p id="roiNote" class="calc__note">Расчёт обновляется в реальном времени. Все данные остаются в браузере.</p>
+      </form>
+
+      <aside class="calc__result" aria-live="polite">
+        <div class="result__card result__card--main">
+          <span class="result__label">Базовая оценка прироста чистой прибыли за 12 мес.</span>
+          <strong class="result__value" id="resBase">— ₽</strong>
+          <div class="result__bar" aria-hidden="true">
+            <i id="confBar"></i>
+          </div>
+          <span class="result__conf">Уровень уверенности модели: <b id="confTxt">—</b></span>
+        </div>
+
+        <div class="result__split">
+          <div class="result__small">
+            <span>Консервативно</span>
+            <strong id="resLow">— ₽</strong>
+          </div>
+          <div class="result__small result__small--up">
+            <span>Оптимистично</span>
+            <strong id="resHigh">— ₽</strong>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn--primary btn--block">Передать расчёт менеджеру</a>
+        <button type="button" id="exportRoi" class="btn btn--ghost btn--block">Скачать расчёт (CSV)</button>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases" class="cases" aria-labelledby="casesTitle">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="kicker">03 — Кейсы</span>
+        <h2 id="casesTitle" class="section-title">
+          Что меняется, когда цифры начинают говорить правду
+        </h2>
+      </header>
+    </div>
+
+    <div class="cases__rail" tabindex="0" aria-label="Горизонтальный список кейсов">
+      <article class="case" data-reveal>
+        <header class="case__head"><span>Ритейл</span><b>2.4 млрд ₽ выручки</b></header>
+        <h3>Реструктуризация маржи в сети из 38 магазинов</h3>
+        <p>Вычислили 11 убыточных SKU-категорий. Перевели сеть на ABC-модель закупок.</p>
+        <ul class="case__kpi">
+          <li><b>+38%</b><span>EBITDA за 9 мес.</span></li>
+          <li><b>−21%</b><span>оборотный капитал</span></li>
+          <li><b>4.2×</b><span>ROI проекта</span></li>
+        </ul>
+      </article>
+
+      <article class="case" data-reveal>
+        <header class="case__head"><span>SaaS</span><b>Серия B</b></header>
+        <h3>Подготовка к раунду $14M и защита cap table</h3>
+        <p>Пересобрали unit-экономику и финансовую модель под требования фондов TIER-1.</p>
+        <ul class="case__kpi">
+          <li><b>$14M</b><span>привлечено</span></li>
+          <li><b>−2.1×</b><span>дилюция против плана</span></li>
+          <li><b>96 дн.</b><span>срок сделки</span></li>
+        </ul>
+      </article>
+
+      <article class="case" data-reveal>
+        <header class="case__head"><span>Производство</span><b>Семейный бизнес</b></header>
+        <h3>Передача управления второму поколению без потери контроля</h3>
+        <p>Юридический и финансовый дизайн холдинга. Защита от налоговых и наследственных рисков.</p>
+        <ul class="case__kpi">
+          <li><b>0</b><span>налоговых претензий</span></li>
+          <li><b>−43%</b><span>стоимость обслуживания</span></li>
+          <li><b>3 поколения</b><span>в периметре</span></li>
+        </ul>
+      </article>
+
+      <article class="case" data-reveal>
+        <header class="case__head"><span>Девелопмент</span><b>Проектное финансирование</b></header>
+        <h3>Снижение ставки по кредиту на 2.6 п.п. за счёт переупаковки модели</h3>
+        <p>Подготовили инвестиционный меморандум и защитили перед двумя банками одновременно.</p>
+        <ul class="case__kpi">
+          <li><b>−2.6 п.п.</b><span>ставка</span></li>
+          <li><b>+340 млн ₽</b><span>экономии за срок</span></li>
+          <li><b>2 банка</b><span>конкуренция за лимит</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section id="trust" class="trust" aria-labelledby="trustTitle">
+    <div class="wrap">
+      <h2 id="trustTitle" class="visually-hidden">Доверие и регуляторы</h2>
+      <div class="trust__grid">
+        <blockquote class="trust__quote" data-reveal>
+          <p>«Они вошли в наш аудит на третий день после звонка. Это самое короткое расстояние от вопроса к ответу, которое я видел в консалтинге за 18 лет».</p>
+          <cite>— Е. Лазарев, CFO, ритейл-холдинг</cite>
+        </blockquote>
+        <ul class="trust__logos" aria-label="Регуляторы и партнёры">
+          <li>СРО «Аудиторская Палата»</li>
+          <li>ФНС · аккредитация</li>
+          <li>МосБиржа · участник</li>
+          <li>RAEX · A++</li>
+          <li>IFRS Foundation</li>
+          <li>Forbes Russia · 2024</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAL -->
+  <section id="portal" class="portal" aria-labelledby="portalTitle">
+    <div class="wrap portal__grid">
+      <div class="portal__copy">
+        <span class="kicker">04 — Клиентский портал</span>
+        <h2 id="portalTitle" class="section-title">
+          Защищённое пространство для ваших отчётов
+        </h2>
+        <p>
+          Каждый клиент получает доступ к личному кабинету: статус задач, шифрованные документы,
+          выгрузка отчётов в PDF и CSV, журнал действий команды. Двухфакторная авторизация,
+          сертификат ISO 27001.
+        </p>
+        <ul class="portal__feat">
+          <li>End-to-end шифрование AES-256</li>
+          <li>Журнал доступа и водяные знаки</li>
+          <li>Экспорт PDF / CSV / XLSX в один клик</li>
+          <li>SSO для корпоративных доменов</li>
+        </ul>
+      </div>
+
+      <div class="portal__panel" aria-label="Демо клиентского портала">
+        <div class="panel__chrome">
+          <span></span><span></span><span></span>
+          <b>portal.apexfinance.example</b>
+        </div>
+
+        <div class="panel__body" id="portalBody">
+          <form id="loginForm" class="login" novalidate>
+            <h3>Вход в портал</h3>
+            <p class="login__demo">Демо-доступ: <b>cfo@demo</b> / <b>apex2026</b></p>
+            <label>E-mail
+              <input type="email" id="logEmail" required autocomplete="username" />
+            </label>
+            <label>Пароль
+              <input type="password" id="logPass" required autocomplete="current-password" />
+            </label>
+            <label class="login__chk">
+              <input type="checkbox" id="log2fa" /> Запросить 2FA-код
+            </label>
+            <button class="btn btn--primary btn--block" type="submit">Войти в портал</button>
+            <span class="login__err" id="logErr" role="alert"></span>
+          </form>
+
+          <div class="dash" hidden id="dashboard">
+            <header class="dash__head">
+              <div>
+                <span class="kicker">Сессия</span>
+                <h3>Здравствуйте, <span id="userName">CFO Demo</span></h3>
+              </div>
+              <button class="btn btn--ghost btn--sm" id="logoutBtn">Выйти</button>
+            </header>
+
+            <div class="dash__cards">
+              <article>
+                <span>Открытых задач</span>
+                <b>7</b>
+              </article>
+              <article>
+                <span>Документов в работе</span>
+                <b>23</b>
+              </article>
+              <article>
+                <span>Закрытых проектов</span>
+                <b>14</b>
+              </article>
+            </div>
+
+            <table class="dash__table">
+              <caption class="visually-hidden">Список отчётов</caption>
+              <thead><tr><th>Отчёт</th><th>Период</th><th>Статус</th><th></th></tr></thead>
+              <tbody>
+                <tr><td>P&amp;L Управленческий</td><td>Q1 2026</td><td><span class="tag tag--ok">Готов</span></td><td><button class="link" data-export="pl-q1">PDF</button></td></tr>
+                <tr><td>Cash-flow прогноз</td><td>2026 — 36 мес.</td><td><span class="tag tag--ok">Готов</span></td><td><button class="link" data-export="cf-36">CSV</button></td></tr>
+                <tr><td>Налоговая позиция</td><td>2025 годовой</td><td><span class="tag tag--wait">В работе</span></td><td><button class="link" disabled>—</button></td></tr>
+                <tr><td>Due Diligence — М&amp;А</td><td>Сделка #042</td><td><span class="tag tag--ok">Готов</span></td><td><button class="link" data-export="dd-042">PDF</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <header class="section-head">
+        <span class="kicker">05 — Вопросы</span>
+        <h2 id="faqTitle" class="section-title">Что вы хотите спросить до того, как заплатите</h2>
+      </header>
+
+      <div class="acc">
+        <details>
+          <summary>Сколько стоит аудит и от чего зависит цена?</summary>
+          <p>Стартовый аудит — фикс, от 480 000 ₽. Дальше цена зависит от количества юридических лиц, контуров учёта и сжатости сроков. Итог фиксируем до начала работ.</p>
+        </details>
+        <details>
+          <summary>Подписываете ли вы NDA?</summary>
+          <p>Да, NDA — первое, что мы отправляем после первичного звонка. По запросу подписываем взаимные NDA с положениями о персональной ответственности партнёров.</p>
+        </details>
+        <details>
+          <summary>Работаете ли с компаниями за пределами РФ?</summary>
+          <p>Да. У нас опыт работы с юрисдикциями ОАЭ, Казахстана, Армении и Кипра. Подключаем партнёрских аудиторов на местах.</p>
+        </details>
+        <details>
+          <summary>Что вы не делаете?</summary>
+          <p>Мы не занимаемся налоговой оптимизацией в серых схемах, не готовим «красивые» презентации без модели и не работаем с клиентами, которые не предоставляют первичные документы.</p>
+        </details>
+        <details>
+          <summary>Как быстро можно начать?</summary>
+          <p>Если документы готовы — старт в течение 24 часов после подписания договора. Полный диагностический отчёт — 5 рабочих дней.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" aria-labelledby="contactTitle">
+    <div class="wrap contact__grid">
+      <div class="contact__copy">
+        <span class="kicker">06 — Контакт</span>
+        <h2 id="contactTitle" class="section-title">
+          Один документ. Один созвон. Дальше — решаете вы.
+        </h2>
+        <p>Оставьте заявку — партнёр перезвонит в течение 60 минут в рабочее время. Без подписки. Без рассылок.</p>
+
+        <ul class="contact__list">
+          <li><span>Адрес</span><b>Москва, Пресненская наб., 12, БЦ «Башня Федерация», 47 эт.</b></li>
+          <li><span>Телефон</span><b><a href="tel:+74950000000">+7 495 000-00-00</a></b></li>
+          <li><span>E-mail</span><b><a href="mailto:office@apexfinance.example">office@apexfinance.example</a></b></li>
+          <li><span>Часы</span><b>Пн–Пт · 09:00–19:00 МСК</b></li>
+        </ul>
+      </div>
+
+      <form class="contact__form" id="leadForm" novalidate>
+        <label>
+          <span>Имя и фамилия</span>
+          <input type="text" name="name" required minlength="2" autocomplete="name" />
+        </label>
+        <label>
+          <span>Компания</span>
+          <input type="text" name="company" autocomplete="organization" />
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>
+          <span>Телефон</span>
+          <input type="tel" name="phone" required autocomplete="tel" pattern="[+0-9 ()\-]{7,}" />
+        </label>
+        <label class="full">
+          <span>Что нужно решить</span>
+          <textarea name="message" rows="4" placeholder="Кратко опишите задачу"></textarea>
+        </label>
+        <label class="full check">
+          <input type="checkbox" name="consent" required />
+          <span>Согласен с <a href="#privacy">политикой обработки данных</a>. Это не публичная оферта.</span>
+        </label>
+        <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>
+        <p class="form__status" id="leadStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact__map" aria-label="Карта расположения офиса">
+        <div class="map" id="map" role="application" aria-label="Карта. Москва, Пресненская набережная, 12"></div>
+        <p class="map__attr">Данные карты — <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a> · тайлы <a href="https://carto.com/attributions" target="_blank" rel="noopener">© CARTO</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <span class="logo__mark logo__mark--lg">AF<i>/</i>G</span>
+      <p>ApexFinance Group · Финансовый консалтинг для собственников и CFO с 2014 года.</p>
+    </div>
+    <ul>
+      <li><b>Услуги</b></li>
+      <li><a href="#approach">Метод 4D</a></li>
+      <li><a href="#calculator">ROI-калькулятор</a></li>
+      <li><a href="#cases">Кейсы</a></li>
+    </ul>
+    <ul>
+      <li><b>Клиентам</b></li>
+      <li><a href="#portal">Портал</a></li>
+      <li><a href="#contact">Связаться</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <ul>
+      <li><b>Юридическое</b></li>
+      <li><a href="#privacy">Политика данных</a></li>
+      <li><a href="#offer">Договор-оферта</a></li>
+      <li><span>ИНН 7700000000 · ОГРН 1147700000000</span></li>
+    </ul>
+  </div>
+  <div class="wrap footer__bottom">
+    <span>© <span id="year">2026</span> ApexFinance Group. Все права защищены.</span>
+    <span>Сделано в Москве. Думаем — в цифрах.</span>
+  </div>
+</footer>
+
+<a href="#contact" class="sticky-cta" aria-label="Запросить аудит">Запросить аудит</a>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>

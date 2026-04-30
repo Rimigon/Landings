@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UrbanBrew — уютные кофейни и доставка кофе по Москве. Заходите на чашечку!">
+  <title>UrbanBrew — твой уютный кофе</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- SVG SPRITE -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-cup" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 9h13v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9zM16 11h2a3 3 0 0 1 0 6h-2M7 3c0 1.5-1 1.5-1 3M11 3c0 1.5-1 1.5-1 3"/>
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 21c0-9 7-16 16-16 0 9-7 16-16 16zM5 21c4-4 8-7 13-9"/>
+      </symbol>
+      <symbol id="i-house" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9z"/>
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3l2.6 5.6 6.1.6-4.6 4.2 1.4 6.1L12 16.7l-5.5 2.8 1.4-6.1L3.3 9.2l6.1-.6L12 3z"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22s7-7.5 7-13a7 7 0 1 0-14 0c0 5.5 7 13 7 13z"/>
+        <circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      </symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM7.5 19a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM17.5 19a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+      </symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 11h16v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9zM3 7h18v4H3zM12 7v14M12 7c-2 0-4-1-4-3s2-2 4 0c2-2 4-2 4 0s-2 3-4 3z"/>
+      </symbol>
+      <symbol id="i-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 4c4 0 6 2 6 6-2 0-3.5.5-5 2l-5 5-4-4 5-5c1.5-1.5 2-3 3-4zM5 14l-2 7 7-2M9 11a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 21c0-4 4-7 8-7s8 3 8 7"/>
+      </symbol>
+      <symbol id="i-card" viewBox="0 0 24 24">
+        <rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path stroke="currentColor" stroke-width="1.8" d="M3 10h18M7 15h3"/>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 21s-7-4.5-9-9.5C1.5 7 5 4 8 4c2 0 3 1 4 2 1-1 2-2 4-2 3 0 6.5 3 5 7.5-2 5-9 9.5-9 9.5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo">
+        <span class="logo__cup"><svg><use href="#i-cup"/></svg></span>
+        <span class="logo__text">Urban<em>Brew</em></span>
+      </a>
+      <nav class="nav" role="navigation">
+        <a href="#about">О нас</a>
+        <a href="#menu">Меню</a>
+        <a href="#locations">Кофейни</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a href="#order" class="btn btn--primary">Заказать</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__blob hero__blob--3"></div>
+
+      <div class="hero__content">
+        <span class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Свежая обжарка каждое утро
+        </span>
+        <h1 class="hero__title">
+          Кофе, от которого <br>
+          <span class="hero__title-script">хочется улыбаться</span>
+        </h1>
+        <p class="hero__desc">
+          Уютные кофейни по всей Москве и быстрая доставка домой.
+          Заваривай момент — мы позаботимся о вкусе.
+        </p>
+        <div class="hero__actions">
+          <a href="#order" class="btn btn--primary btn--lg">Заказать кофе</a>
+          <a href="#locations" class="btn btn--ghost btn--lg">Найти кофейню</a>
+        </div>
+        <div class="hero__features">
+          <span class="hero__feature">
+            <svg class="hero__feature-icon"><use href="#i-truck"/></svg>
+            Доставка 20-40 мин
+          </span>
+          <span class="hero__feature">
+            <svg class="hero__feature-icon"><use href="#i-gift"/></svg>
+            Бесплатно от 500 ₽
+          </span>
+          <span class="hero__feature">
+            <svg class="hero__feature-icon"><use href="#i-pin"/></svg>
+            50+ точек
+          </span>
+        </div>
+      </div>
+
+      <div class="hero__cup" aria-hidden="true">
+        <svg class="hero__cup-svg" viewBox="0 0 24 24"><use href="#i-cup"/></svg>
+        <div class="hero__steam hero__steam--1"></div>
+        <div class="hero__steam hero__steam--2"></div>
+        <div class="hero__steam hero__steam--3"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--cream" id="about">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">— почему мы —</p>
+          <h2 class="section__title">Делаем кофе с <em>любовью</em></h2>
+        </header>
+        <div class="features">
+          <article class="feature-card feature-card--1">
+            <div class="feature-card__icon"><svg><use href="#i-leaf"/></svg></div>
+            <h3 class="feature-card__title">Зерно с фермы</h3>
+            <p class="feature-card__text">Покупаем у проверенных фермеров напрямую. Без посредников — только вкус и душа.</p>
+          </article>
+          <article class="feature-card feature-card--2">
+            <div class="feature-card__icon"><svg><use href="#i-house"/></svg></div>
+            <h3 class="feature-card__title">50+ уютных мест</h3>
+            <p class="feature-card__text">В каждом районе Москвы — наша кофейня. Заходи отдохнуть или забери с собой.</p>
+          </article>
+          <article class="feature-card feature-card--3">
+            <div class="feature-card__icon"><svg><use href="#i-star"/></svg></div>
+            <h3 class="feature-card__title">Бонусы за всё</h3>
+            <p class="feature-card__text">1 ₽ = 1 балл. 500 баллов — кофе в подарок. За регистрацию +100 баллов сразу.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section">
+      <div class="container">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__value">15K+</div>
+            <div class="stat__label">довольных гостей</div>
+          </div>
+          <div class="stat stat--accent">
+            <div class="stat__value">50+</div>
+            <div class="stat__label">кофеен в Москве</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">4.9</div>
+            <div class="stat__label">средняя оценка</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--cream" id="reviews">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">— отзывы —</p>
+          <h2 class="section__title">Что говорят <em>гости</em></h2>
+        </header>
+        <div class="reviews">
+          <article class="review-card">
+            <div class="review-card__quote">"</div>
+            <p class="review-card__text">Лучший кофе в Москве! Латте с овсяным — это вообще что-то нереальное. Бариста — мастер.</p>
+            <div class="review-card__footer">
+              <div class="review-card__avatar">АК</div>
+              <div class="review-card__info">
+                <div class="review-card__name">Алексей К.</div>
+                <div class="review-card__rating">★★★★★</div>
+              </div>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-card__quote">"</div>
+            <p class="review-card__text">Третий месяц только UrbanBrew. Бонусы реально окупаются! Каждое утро на офис — стабильно.</p>
+            <div class="review-card__footer">
+              <div class="review-card__avatar">МС</div>
+              <div class="review-card__info">
+                <div class="review-card__name">Мария С.</div>
+                <div class="review-card__rating">★★★★★</div>
+              </div>
+            </div>
+          </article>
+          <article class="review-card">
+            <div class="review-card__quote">"</div>
+            <p class="review-card__text">Раф — огонь! Кофейня на Арбате стала моей любимой. Уютно, вкусно, ребята — солнышки.</p>
+            <div class="review-card__footer">
+              <div class="review-card__avatar">ДП</div>
+              <div class="review-card__info">
+                <div class="review-card__name">Дмитрий П.</div>
+                <div class="review-card__rating">★★★★★</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section" id="menu">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">— меню —</p>
+          <h2 class="section__title">Найди свой <em>любимый</em></h2>
+          <p class="section__desc">От классики до авторских миксов — у нас есть всё, что согреет душу</p>
+        </header>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Эспрессо</h3>
+            <p class="menu-card__price">от 150 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Двойной эспрессо</h3>
+            <p class="menu-card__price">от 190 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Американо</h3>
+            <p class="menu-card__price">от 160 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Капучино</h3>
+            <p class="menu-card__price">от 180 ₽</p>
+          </article>
+          <article class="menu-card menu-card--highlight">
+            <div class="menu-card__badge">хит</div>
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Латте</h3>
+            <p class="menu-card__price">от 220 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Флэт уайт</h3>
+            <p class="menu-card__price">от 210 ₽</p>
+          </article>
+          <article class="menu-card menu-card--highlight">
+            <div class="menu-card__badge">хит</div>
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Раф</h3>
+            <p class="menu-card__price">от 250 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Matcha латте</h3>
+            <p class="menu-card__price">от 320 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Шоколадный латте</h3>
+            <p class="menu-card__price">от 240 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Холодный кофе</h3>
+            <p class="menu-card__price">от 260 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Кокосовый латте</h3>
+            <p class="menu-card__price">от 270 ₽</p>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon"><svg><use href="#i-cup"/></svg></div>
+            <h3 class="menu-card__title">Ледяной кофе</h3>
+            <p class="menu-card__price">от 280 ₽</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section class="section section--cream" id="locations">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">— локации —</p>
+          <h2 class="section__title">Загляни в <em>ближайшую</em></h2>
+        </header>
+        <div class="locations">
+          <div class="locations__list">
+            <div class="location-group">
+              <div class="location-group__title">Центр</div>
+              <article class="location-item" tabindex="0" data-lat="55.7520" data-lng="37.5876">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">ул. Арбат, 24</div>
+                  <div class="location-item__status">Открыто до 22:00</div>
+                </div>
+              </article>
+              <article class="location-item" tabindex="0" data-lat="55.7651" data-lng="37.5993">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">Пушкинская пл., 2</div>
+                  <div class="location-item__status">Открыто до 23:00</div>
+                </div>
+              </article>
+              <article class="location-item" tabindex="0" data-lat="55.7585" data-lng="37.6101">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">Тверская ул., 16</div>
+                  <div class="location-item__status">Открыто до 22:00</div>
+                </div>
+              </article>
+            </div>
+            <div class="location-group">
+              <div class="location-group__title">Север</div>
+              <article class="location-item" tabindex="0" data-lat="55.8182" data-lng="37.6393">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">ул. Академика Королёва, 15</div>
+                  <div class="location-item__status">Открыто до 22:00</div>
+                </div>
+              </article>
+              <article class="location-item" tabindex="0" data-lat="55.7902" data-lng="37.5079">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">Ленинский пр-т, 78</div>
+                  <div class="location-item__status">Открыто до 22:00</div>
+                </div>
+              </article>
+            </div>
+            <div class="location-group">
+              <div class="location-group__title">Восток</div>
+              <article class="location-item" tabindex="0" data-lat="55.7711" data-lng="37.8384">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">Щёлковское шоссе, 5</div>
+                  <div class="location-item__status">Открыто до 22:00</div>
+                </div>
+              </article>
+              <article class="location-item" tabindex="0" data-lat="55.7949" data-lng="37.8123">
+                <div class="location-item__pin"><svg><use href="#i-pin"/></svg></div>
+                <div class="location-item__info">
+                  <div class="location-item__address">Измайловский пр-д, 2</div>
+                  <div class="location-item__status">Открыто до 22:00</div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER -->
+    <section class="section" id="order">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-box__title">Закажи и <em>наслаждайся</em></h2>
+          <p class="cta-box__desc">Оставь заявку — и наш бариста уже бежит варить твой кофе</p>
+          <form class="form" id="order-form">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name" class="form__label">Как тебя зовут?</label>
+                <input type="text" id="name" class="form__input" placeholder="Иван" required>
+              </div>
+              <div class="form__group">
+                <label for="phone" class="form__label">Телефон</label>
+                <input type="tel" id="phone" class="form__input" placeholder="+7 (999) 000-00-00" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email <span class="form__optional">(если хочешь)</span></label>
+              <input type="email" id="email" class="form__input" placeholder="example@mail.ru">
+            </div>
+            <button type="submit" class="btn btn--primary form__submit">Заказать кофе</button>
+            <p class="form__note">Нажимая кнопку, ты соглашаешься с обработкой персональных данных</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--cream" id="faq">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__label">— вопросы —</p>
+          <h2 class="section__title">Часто <em>спрашивают</em></h2>
+        </header>
+        <div class="faq">
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span class="faq-item__q">
+                <svg class="faq-item__q-icon"><use href="#i-target"/></svg>
+                Как копятся баллы?
+              </span>
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <p class="faq-item__answer">Очень просто: 1 ₽ = 1 балл. Накопил 500 — получаешь любимый напиток в подарок.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span class="faq-item__q">
+                <svg class="faq-item__q-icon"><use href="#i-rocket"/></svg>
+                Сколько идёт доставка?
+              </span>
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <p class="faq-item__answer">В пределах МКАД — 20-40 минут. За МКАД — звонит наш оператор и всё уточняет лично.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span class="faq-item__q">
+                <svg class="faq-item__q-icon"><use href="#i-user"/></svg>
+                Можно без регистрации?
+              </span>
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <p class="faq-item__answer">Конечно! Но если зарегистрируешься — сразу получишь 100 приветственных баллов.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <span class="faq-item__q">
+                <svg class="faq-item__q-icon"><use href="#i-card"/></svg>
+                Какие способы оплаты?
+              </span>
+              <span class="faq-item__icon">+</span>
+            </summary>
+            <p class="faq-item__answer">Visa, MasterCard, МИР, Apple Pay, Google Pay, СБП и наличными курьеру. Выбирай удобный.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="logo__cup"><svg><use href="#i-cup"/></svg></span>
+            <span class="logo__text">Urban<em>Brew</em></span>
+          </div>
+          <p class="footer__tagline">Уютный кофе с доставкой по Москве. Заходи на чашечку!</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4>Меню сайта</h4>
+            <a href="#about">О нас</a>
+            <a href="#menu">Меню</a>
+            <a href="#locations">Кофейни</a>
+            <a href="#order">Заказ</a>
+          </div>
+          <div class="footer__column">
+            <h4>Свяжись с нами</h4>
+            <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+            <a href="mailto:hello@urbanbrew.ru">hello@urbanbrew.ru</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © 2026 UrbanBrew Coffee · Сделано с
+          <svg class="footer__heart"><use href="#i-heart"/></svg>
+        </p>
+        <div class="footer__social">
+          <a href="https://t.me/urbanbrew" aria-label="Telegram" target="_blank">TG</a>
+          <a href="https://vk.com/urbanbrew" aria-label="VKontakte" target="_blank">VK</a>
+          <a href="https://wa.me/74950000000" aria-label="WhatsApp" target="_blank">WA</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

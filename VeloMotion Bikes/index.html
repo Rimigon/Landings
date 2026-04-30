@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0a" />
+<title>VeloMotion Bikes — велосипеды, собранные под тебя</title>
+<meta name="description" content="Интернет-магазин велосипедов VeloMotion: конфигуратор сборки под рост и стиль езды, прямое сравнение моделей, живые отзывы. Доставка по РФ, тест-драйв в Москве и СПб." />
+<link rel="canonical" href="https://velomotion.example/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="VeloMotion Bikes — велосипеды, собранные под тебя" />
+<meta property="og:description" content="Конфигуратор сборки, прямое сравнение моделей, живые отзывы. Доставка по РФ." />
+<meta property="og:url" content="https://velomotion.example/" />
+<meta property="og:image" content="https://velomotion.example/og.jpg" />
+<meta property="og:locale" content="ru_RU" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="VeloMotion Bikes" />
+<meta name="twitter:description" content="Велосипеды, собранные под тебя. Конфигуратор, сравнение, отзывы." />
+<meta name="twitter:image" content="https://velomotion.example/og.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://a.basemaps.cartocdn.com" crossorigin />
+<link rel="preconnect" href="https://b.basemaps.cartocdn.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+<link rel="stylesheet" href="style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "VeloMotion Bikes",
+  "url": "https://velomotion.example/",
+  "logo": "https://velomotion.example/logo.svg",
+  "image": "https://velomotion.example/og.jpg",
+  "description": "Интернет-магазин велосипедов с конфигуратором сборки и прямым сравнением моделей.",
+  "currenciesAccepted": "RUB",
+  "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "RU",
+    "addressLocality": "Москва",
+    "streetAddress": "ул. Цветной бульвар, 14"
+  },
+  "telephone": "+7 (495) 000-00-00",
+  "openingHours": "Mo-Su 10:00-21:00",
+  "sameAs": [
+    "https://t.me/velomotion",
+    "https://vk.com/velomotion"
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#models">Перейти к моделям</a>
+
+<header class="topbar" role="banner">
+  <a class="logo" href="#top" aria-label="VeloMotion Bikes — на главную">
+    <span class="logo__mark" aria-hidden="true">/V/</span>
+    <span class="logo__text">VeloMotion</span>
+  </a>
+  <nav class="nav" aria-label="Главное меню">
+    <a href="#models">01 — Модели</a>
+    <a href="#config">02 — Конфигуратор</a>
+    <a href="#compare">03 — Сравнение</a>
+    <a href="#reviews">04 — Отзывы</a>
+    <a href="#contact">05 — Контакты</a>
+  </nav>
+  <a class="topbar__cta" href="#config">Собрать свой</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__grid">
+      <div class="hero__meta">
+        <span class="tag">[ выпуск 2026 — серия 04 ]</span>
+        <span class="tag tag--mono">RU · ДОСТАВКА 1—4 ДНЯ</span>
+      </div>
+
+      <h1 id="hero-title" class="hero__title">
+        <span class="t-outline">Велосипед</span>
+        <span class="t-fill">— это не товар.</span>
+        <span class="t-outline t-shift">Это твоя</span>
+        <span class="t-fill t-huge">геометрия.</span>
+      </h1>
+
+      <p class="hero__lead">
+        VeloMotion собирает велосипед под твой рост, стиль езды и асфальт под колёсами. Не «размер L»,
+        а 47 параметров — от длины шатуна до угла рулевой. Конфигуратор делает то, что обычно делает мастер
+        в дорогом ателье. Только за 6 минут и в браузере.
+      </p>
+
+      <div class="hero__ctas">
+        <a class="btn btn--solid" href="#config" data-cursor="собрать">
+          Собрать за 6 минут
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href="#models">Посмотреть готовые</a>
+      </div>
+
+      <ul class="hero__stats" aria-label="Ключевые цифры">
+        <li><b>14</b><span>лет в индустрии</span></li>
+        <li><b>9 312</b><span>собранных байков</span></li>
+        <li><b>4.92</b><span>рейтинг на Я.Маркет</span></li>
+        <li><b>30</b><span>дней тест-драйва</span></li>
+      </ul>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__svg-wrap">
+          <span class="hero__corners" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span class="hero__stamp" aria-hidden="true">
+            <b>VM-04 / 2026</b>
+            <span>geometry · component map · rev. 12</span>
+          </span>
+          <img class="bike-blueprint"
+               src="assets/bicycle-blueprint.svg"
+               alt=""
+               loading="eager"
+               decoding="async" />
+          <span class="callout callout--1">
+            <i></i> Угол рулевой 71°
+          </span>
+          <span class="callout callout--2">
+            <i></i> Карбон T1100
+          </span>
+          <span class="callout callout--3">
+            <i></i> Вес рамы 1.04 кг
+          </span>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>scroll</span>
+        <i></i>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>SHIMANO XTR</span><span>·</span>
+        <span>SRAM AXS</span><span>·</span>
+        <span>FOX FACTORY</span><span>·</span>
+        <span>DT SWISS</span><span>·</span>
+        <span>SCHWALBE</span><span>·</span>
+        <span>SELLE ITALIA</span><span>·</span>
+        <span>SHIMANO XTR</span><span>·</span>
+        <span>SRAM AXS</span><span>·</span>
+        <span>FOX FACTORY</span><span>·</span>
+        <span>DT SWISS</span><span>·</span>
+        <span>SCHWALBE</span><span>·</span>
+        <span>SELLE ITALIA</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODELS ============ -->
+  <section class="section models" id="models" aria-labelledby="models-title">
+    <header class="section__head">
+      <span class="section__num">01</span>
+      <h2 id="models-title" class="section__title">
+        Готовые сборки. <span class="t-outline">Шесть характеров.</span>
+      </h2>
+      <p class="section__lead">
+        Если на конфигуратор нет 6 минут — выбери из коллекции. Каждая модель уже собрана нашими механиками,
+        прокатана 200+ км по контрольному маршруту и поставляется с журналом сборки.
+      </p>
+    </header>
+
+    <div class="models__grid">
+
+      <article class="card" data-model="urban" tabindex="0">
+        <div class="card__index">№ 01 / URBAN</div>
+        <div class="card__media">
+          <img src="assets/pictogram-road.svg" alt="" loading="lazy" decoding="async" />
+        </div>
+        <h3 class="card__title">Streetline 7</h3>
+        <p class="card__sub">Городской · сталь Reynolds 525 · 10.4 кг</p>
+        <ul class="card__specs">
+          <li>Shimano Tiagra 2×10</li>
+          <li>Гидравлические дисковые</li>
+          <li>Шоссейная посадка</li>
+        </ul>
+        <div class="card__foot">
+          <span class="card__price"><b>89 900</b> ₽</span>
+          <a class="card__link" href="#config?preset=urban">Конфигурировать →</a>
+        </div>
+      </article>
+
+      <article class="card card--accent" data-model="gravel" tabindex="0">
+        <div class="card__index">№ 02 / GRAVEL</div>
+        <div class="card__badge">бестселлер</div>
+        <div class="card__media">
+          <img src="assets/pictogram-mtb.svg" alt="" loading="lazy" decoding="async" />
+        </div>
+        <h3 class="card__title">Driftcore GR</h3>
+        <p class="card__sub">Гравел · карбон T1000 · 8.2 кг</p>
+        <ul class="card__specs">
+          <li>SRAM Rival AXS 12s</li>
+          <li>Гидрав. диски 160 мм</li>
+          <li>Покрышки 45c, tubeless</li>
+        </ul>
+        <div class="card__foot">
+          <span class="card__price"><b>189 000</b> ₽</span>
+          <a class="card__link" href="#config?preset=gravel">Конфигурировать →</a>
+        </div>
+      </article>
+
+      <article class="card" data-model="mtb" tabindex="0">
+        <div class="card__index">№ 03 / MTB</div>
+        <div class="card__media">
+          <img src="assets/pictogram-bmx.svg" alt="" loading="lazy" decoding="async" />
+        </div>
+        <h3 class="card__title">Ridge X29</h3>
+        <p class="card__sub">Хардтейл · алюминий 6066 · 12.1 кг</p>
+        <ul class="card__specs">
+          <li>Shimano Deore 1×12</li>
+          <li>RockShox Recon 100 мм</li>
+          <li>Колёса 29"</li>
+        </ul>
+        <div class="card__foot">
+          <span class="card__price"><b>124 500</b> ₽</span>
+          <a class="card__link" href="#config?preset=mtb">Конфигурировать →</a>
+        </div>
+      </article>
+
+      <article class="card" data-model="road" tabindex="0">
+        <div class="card__index">№ 04 / ROAD</div>
+        <div class="card__media">
+          <img src="assets/pictogram-road.svg" alt="" loading="lazy" decoding="async" class="is-flipped" />
+        </div>
+        <h3 class="card__title">Apex R-Pro</h3>
+        <p class="card__sub">Шоссейный · карбон T1100 · 6.8 кг</p>
+        <ul class="card__specs">
+          <li>Shimano Ultegra Di2</li>
+          <li>Аэродинамические колёса 50</li>
+          <li>UCI ready</li>
+        </ul>
+        <div class="card__foot">
+          <span class="card__price"><b>389 000</b> ₽</span>
+          <a class="card__link" href="#config?preset=road">Конфигурировать →</a>
+        </div>
+      </article>
+
+      <article class="card" data-model="ebike" tabindex="0">
+        <div class="card__index">№ 05 / E-BIKE</div>
+        <div class="card__media">
+          <img src="assets/pictogram-mtb.svg" alt="" loading="lazy" decoding="async" class="is-flipped" />
+        </div>
+        <h3 class="card__title">Volt-City E2</h3>
+        <p class="card__sub">E-bike · мотор Bosch Performance · 22 кг</p>
+        <ul class="card__specs">
+          <li>Запас 120 км</li>
+          <li>5 уровней ассиста</li>
+          <li>Багажник + крылья</li>
+        </ul>
+        <div class="card__foot">
+          <span class="card__price"><b>249 000</b> ₽</span>
+          <a class="card__link" href="#config?preset=ebike">Конфигурировать →</a>
+        </div>
+      </article>
+
+      <article class="card card--ghost" data-model="custom" tabindex="0">
+        <div class="card__index">№ 06 / CUSTOM</div>
+        <div class="card__media card__media--blueprint">
+          <img src="assets/bicycle-blueprint.svg" alt="" loading="lazy" decoding="async" />
+          <span class="big-q" aria-hidden="true">?</span>
+        </div>
+        <h3 class="card__title">Твоя сборка</h3>
+        <p class="card__sub">47 параметров · 12 цветов · твой бюджет</p>
+        <ul class="card__specs">
+          <li>Подбор по росту и стилю</li>
+          <li>Сборка за 5—9 дней</li>
+          <li>Журнал сборки в комплекте</li>
+        </ul>
+        <div class="card__foot">
+          <span class="card__price"><b>от 79 000</b> ₽</span>
+          <a class="card__link" href="#config">Открыть конфигуратор →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CONFIGURATOR ============ -->
+  <section class="section config" id="config" aria-labelledby="config-title">
+    <header class="section__head">
+      <span class="section__num">02</span>
+      <h2 id="config-title" class="section__title">
+        Конфигуратор. <span class="t-outline">Шесть шагов.</span>
+      </h2>
+      <p class="section__lead">
+        Не маркетинговый калькулятор. Реальный конфигуратор: каждое решение пересчитывает геометрию,
+        вес и итоговую цену. В конце — заявка к мастеру с твоими параметрами.
+      </p>
+    </header>
+
+    <div class="config__layout">
+      <ol class="config__steps" role="tablist" aria-label="Шаги сборки">
+        <li><button type="button" class="step is-active" data-step="1" role="tab" aria-selected="true">01 · Тип</button></li>
+        <li><button type="button" class="step" data-step="2" role="tab" aria-selected="false">02 · Размер</button></li>
+        <li><button type="button" class="step" data-step="3" role="tab" aria-selected="false">03 · Рама</button></li>
+        <li><button type="button" class="step" data-step="4" role="tab" aria-selected="false">04 · Трансмиссия</button></li>
+        <li><button type="button" class="step" data-step="5" role="tab" aria-selected="false">05 · Колёса</button></li>
+        <li><button type="button" class="step" data-step="6" role="tab" aria-selected="false">06 · Цвет</button></li>
+      </ol>
+
+      <div class="config__panel">
+
+        <div class="config__pane is-active" data-pane="1" role="tabpanel">
+          <h3>Где ты будешь ездить?</h3>
+          <div class="opts">
+            <label><input type="radio" name="type" value="urban" checked /><span>Город / асфальт <i>+0 ₽</i></span></label>
+            <label><input type="radio" name="type" value="gravel" /><span>Гравел / грунт <i>+18 000 ₽</i></span></label>
+            <label><input type="radio" name="type" value="mtb" /><span>МТБ / лес <i>+24 000 ₽</i></span></label>
+            <label><input type="radio" name="type" value="road" /><span>Шоссе / тренировки <i>+42 000 ₽</i></span></label>
+          </div>
+        </div>
+
+        <div class="config__pane" data-pane="2" role="tabpanel">
+          <h3>Твой рост?</h3>
+          <div class="slider">
+            <input type="range" id="height" min="150" max="200" step="1" value="178" />
+            <output for="height" id="heightOut">178 см</output>
+          </div>
+          <p class="hint">Рекомендованная ростовка: <b id="frameSize">L (54)</b>. Можно изменить вручную.</p>
+          <div class="opts opts--inline" id="sizeOpts">
+            <label><input type="radio" name="size" value="S" /><span>S (50)</span></label>
+            <label><input type="radio" name="size" value="M" /><span>M (52)</span></label>
+            <label><input type="radio" name="size" value="L" checked /><span>L (54)</span></label>
+            <label><input type="radio" name="size" value="XL" /><span>XL (56)</span></label>
+          </div>
+        </div>
+
+        <div class="config__pane" data-pane="3" role="tabpanel">
+          <h3>Материал рамы</h3>
+          <div class="opts">
+            <label><input type="radio" name="frame" value="alu" checked /><span>Алюминий 6066 <i>+0 ₽ · 1.4 кг</i></span></label>
+            <label><input type="radio" name="frame" value="steel" /><span>Сталь Reynolds 525 <i>+12 000 ₽ · 1.9 кг</i></span></label>
+            <label><input type="radio" name="frame" value="carbon" /><span>Карбон T1000 <i>+58 000 ₽ · 1.1 кг</i></span></label>
+            <label><input type="radio" name="frame" value="carbon-pro" /><span>Карбон T1100 <i>+96 000 ₽ · 1.04 кг</i></span></label>
+          </div>
+        </div>
+
+        <div class="config__pane" data-pane="4" role="tabpanel">
+          <h3>Трансмиссия</h3>
+          <div class="opts">
+            <label><input type="radio" name="drive" value="claris" checked /><span>Shimano Claris 2×8 <i>+0 ₽</i></span></label>
+            <label><input type="radio" name="drive" value="tiagra" /><span>Shimano Tiagra 2×10 <i>+14 000 ₽</i></span></label>
+            <label><input type="radio" name="drive" value="ultegra" /><span>Shimano Ultegra Di2 <i>+74 000 ₽</i></span></label>
+            <label><input type="radio" name="drive" value="axs" /><span>SRAM Rival AXS 12s <i>+62 000 ₽</i></span></label>
+          </div>
+        </div>
+
+        <div class="config__pane" data-pane="5" role="tabpanel">
+          <h3>Колёса</h3>
+          <div class="opts">
+            <label><input type="radio" name="wheels" value="alloy" checked /><span>Алюминий, низкий профиль <i>+0 ₽</i></span></label>
+            <label><input type="radio" name="wheels" value="alloy-deep" /><span>Алюминий, профиль 35 <i>+9 000 ₽</i></span></label>
+            <label><input type="radio" name="wheels" value="carbon-30" /><span>Карбон, профиль 30 <i>+34 000 ₽</i></span></label>
+            <label><input type="radio" name="wheels" value="carbon-50" /><span>Карбон, профиль 50 <i>+58 000 ₽</i></span></label>
+          </div>
+        </div>
+
+        <div class="config__pane" data-pane="6" role="tabpanel">
+          <h3>Цвет</h3>
+          <div class="swatches" role="radiogroup" aria-label="Цвет рамы">
+            <label><input type="radio" name="color" value="#0a0a0a" checked /><span style="--c:#0a0a0a">Графит</span></label>
+            <label><input type="radio" name="color" value="#f4f4f4" /><span style="--c:#f4f4f4">Мел</span></label>
+            <label><input type="radio" name="color" value="#d63b2f" /><span style="--c:#d63b2f">Огонь</span></label>
+            <label><input type="radio" name="color" value="#1d4ed8" /><span style="--c:#1d4ed8">Кобальт</span></label>
+            <label><input type="radio" name="color" value="#16a34a" /><span style="--c:#16a34a">Хвоя</span></label>
+            <label><input type="radio" name="color" value="#facc15" /><span style="--c:#facc15">Лимон</span></label>
+            <label><input type="radio" name="color" value="#9333ea" /><span style="--c:#9333ea">Аметист</span></label>
+            <label><input type="radio" name="color" value="#f97316" /><span style="--c:#f97316">Ржавчина</span></label>
+          </div>
+        </div>
+
+        <div class="config__nav">
+          <button type="button" class="btn btn--ghost" id="prevStep">← Назад</button>
+          <button type="button" class="btn btn--solid" id="nextStep">Далее →</button>
+        </div>
+      </div>
+
+      <aside class="config__summary" aria-live="polite">
+        <div class="summary__head">
+          <span>текущая сборка</span>
+          <b id="summaryName">Streetline custom</b>
+        </div>
+        <div class="summary__bike" id="summaryFrame" aria-hidden="true">
+          <span class="summary__bike-grid"></span>
+          <img class="summary__bike-img" src="assets/bicycle-blueprint.svg" alt="" loading="lazy" decoding="async" />
+          <span class="summary__bike-swatch" id="summarySwatch" title="Выбранный цвет рамы"></span>
+        </div>
+        <ul class="summary__list">
+          <li><span>Тип</span><b id="sumType">Город</b></li>
+          <li><span>Размер</span><b id="sumSize">L (54)</b></li>
+          <li><span>Рама</span><b id="sumFrame">Алюминий</b></li>
+          <li><span>Трансмиссия</span><b id="sumDrive">Claris 2×8</b></li>
+          <li><span>Колёса</span><b id="sumWheels">Алюминий</b></li>
+          <li><span>Цвет</span><b id="sumColor">Графит</b></li>
+          <li><span>Вес</span><b id="sumWeight">10.8 кг</b></li>
+        </ul>
+        <div class="summary__price">
+          <span>итог</span>
+          <b id="sumPrice">79 000 ₽</b>
+        </div>
+        <a href="#contact" class="btn btn--solid btn--full" id="orderBtn">
+          Оформить эту сборку →
+        </a>
+        <p class="summary__note">Депозит 10%. Сборка 5—9 дней. 30 дней тест-драйва.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ COMPARE ============ -->
+  <section class="section compare" id="compare" aria-labelledby="compare-title">
+    <header class="section__head">
+      <span class="section__num">03</span>
+      <h2 id="compare-title" class="section__title">
+        Сравнение. <span class="t-outline">Без маркетинга.</span>
+      </h2>
+      <p class="section__lead">
+        Выбери до трёх моделей — увидишь только то, что отличается. Никаких «инновационных решений» — числа, граммы, ватты, рубли.
+      </p>
+    </header>
+
+    <div class="compare__pickers" role="group" aria-label="Выбор моделей для сравнения">
+      <select aria-label="Колонка 1" data-col="0">
+        <option value="streetline">Streetline 7</option>
+        <option value="driftcore" selected>Driftcore GR</option>
+        <option value="ridge">Ridge X29</option>
+        <option value="apex">Apex R-Pro</option>
+        <option value="volt">Volt-City E2</option>
+      </select>
+      <select aria-label="Колонка 2" data-col="1">
+        <option value="streetline">Streetline 7</option>
+        <option value="driftcore">Driftcore GR</option>
+        <option value="ridge" selected>Ridge X29</option>
+        <option value="apex">Apex R-Pro</option>
+        <option value="volt">Volt-City E2</option>
+      </select>
+      <select aria-label="Колонка 3" data-col="2">
+        <option value="streetline">Streetline 7</option>
+        <option value="driftcore">Driftcore GR</option>
+        <option value="ridge">Ridge X29</option>
+        <option value="apex" selected>Apex R-Pro</option>
+        <option value="volt">Volt-City E2</option>
+      </select>
+    </div>
+
+    <div class="compare__table-wrap">
+      <table class="compare__table" id="compareTable">
+        <thead>
+          <tr><th scope="col">параметр</th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th></tr>
+        </thead>
+        <tbody><!-- наполняется JS --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <header class="section__head">
+      <span class="section__num">04</span>
+      <h2 id="reviews-title" class="section__title">
+        Отзывы. <span class="t-outline">Через GraphQL.</span>
+      </h2>
+      <p class="section__lead">
+        Тянем напрямую из нашего бэкенда. Не редактируем. Не «модерируем» в обычном смысле — публикуем всё, кроме мата и спама.
+      </p>
+    </header>
+
+    <div class="reviews__head">
+      <div class="reviews__rating">
+        <b>4.92</b><span>из 5</span>
+        <i class="stars" aria-label="4.92 из 5">★★★★★</i>
+        <span class="reviews__count" id="reviewsCount">— отзывов</span>
+      </div>
+      <div class="reviews__filter" role="group" aria-label="Фильтр отзывов">
+        <button type="button" class="chip is-active" data-filter="all">Все</button>
+        <button type="button" class="chip" data-filter="urban">Город</button>
+        <button type="button" class="chip" data-filter="gravel">Гравел</button>
+        <button type="button" class="chip" data-filter="mtb">МТБ</button>
+        <button type="button" class="chip" data-filter="road">Шоссе</button>
+      </div>
+    </div>
+
+    <div class="reviews__list" id="reviewsList" aria-live="polite">
+      <!-- наполняется JS из GraphQL-заглушки -->
+    </div>
+    <p class="reviews__note">Источник: <code>POST /graphql</code> · query <code>reviews(limit:6,category:$cat)</code>. Инструкция по подключению — в комментариях <code>script.js</code>.</p>
+  </section>
+
+  <!-- ============ TRUST / NUMBERS ============ -->
+  <section class="section trust" aria-labelledby="trust-title">
+    <h2 id="trust-title" class="visually-hidden">Гарантии и доверие</h2>
+    <div class="trust__grid">
+      <div class="trust__cell">
+        <b>30</b><span>дней тест-драйва.<br/>Не понравится — вернём деньги без вопросов.</span>
+      </div>
+      <div class="trust__cell trust__cell--invert">
+        <b>2 года</b><span>гарантии на раму.<br/>5 лет — на карбон Pro-серии.</span>
+      </div>
+      <div class="trust__cell">
+        <b>0₽</b><span>сервис в первый сезон.<br/>3 ТО включено в стоимость.</span>
+      </div>
+      <div class="trust__cell trust__cell--invert">
+        <b>1—4 дня</b><span>доставка по РФ. Москва и СПб — день в день, до 16:00.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <header class="section__head">
+      <span class="section__num">05</span>
+      <h2 id="contact-title" class="section__title">
+        Оставь заявку. <span class="t-outline">Мастер позвонит за 15 минут.</span>
+      </h2>
+      <p class="section__lead">
+        В рабочее время (10:00—21:00 МСК) — без ботов и колл-центров. С тобой будет говорить механик, который собирает байки руками.
+      </p>
+    </header>
+
+    <div class="contact__layout">
+      <form class="form" id="orderForm" novalidate aria-label="Форма заявки">
+        <div class="form__row">
+          <label class="field">
+            <span>Имя</span>
+            <input type="text" name="name" required minlength="2" autocomplete="given-name" placeholder="Никита" />
+          </label>
+          <label class="field">
+            <span>Телефон</span>
+            <input type="tel" name="phone" required pattern="^[+0-9 ()\-]{7,20}$" autocomplete="tel" placeholder="+7 ___ ___-__-__" />
+          </label>
+        </div>
+        <label class="field">
+          <span>E-mail (опционально)</span>
+          <input type="email" name="email" autocomplete="email" placeholder="rider@velomotion.ru" />
+        </label>
+        <label class="field">
+          <span>Что обсудить</span>
+          <textarea name="message" rows="3" placeholder="Например: рост 178, нужен гравел до 200 000 ₽"></textarea>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="agree" required />
+          <span>Согласен с <a href="#">политикой обработки данных</a></span>
+        </label>
+        <button class="btn btn--solid btn--full" type="submit">Отправить заявку →</button>
+        <p class="form__hint" id="formHint" role="status"></p>
+      </form>
+
+      <div class="contact__side">
+        <div class="contact__block">
+          <span>Шоурум · Москва</span>
+          <b>Цветной бульвар, 14</b>
+          <p>Тест-драйв 6 моделей · кофе · станок для подгонки посадки.</p>
+        </div>
+        <div class="contact__block">
+          <span>Шоурум · Санкт-Петербург</span>
+          <b>Большая Конюшенная, 9</b>
+          <p>Запись на тест-драйв через форму или Telegram-бот @velomotion.</p>
+        </div>
+        <div class="contact__map">
+          <div id="map" role="application" aria-label="Карта шоурумов VeloMotion в Москве и Санкт-Петербурге"></div>
+          <div class="map__legend" aria-hidden="true">
+            <span><i style="background:#d63b2f"></i> Москва · Цветной 14</span>
+            <span><i style="background:#0a0a0a"></i> СПб · Б. Конюшенная 9</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ-CTA STRIP ============ -->
+  <section class="cta-strip">
+    <div class="cta-strip__inner">
+      <h2 class="cta-strip__title">
+        <span class="t-outline">Не уверен,</span> что подойдёт?
+      </h2>
+      <p>Ответь на 3 вопроса — пришлём подбор из 3 моделей под твой рост, маршрут и бюджет. Бесплатно.</p>
+      <a href="#config" class="btn btn--invert">Запустить подбор →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <span class="logo logo--inv">
+        <span class="logo__mark" aria-hidden="true">/V/</span>
+        <span class="logo__text">VeloMotion</span>
+      </span>
+      <p>Велосипеды, собранные под тебя. С 2012 года.</p>
+    </div>
+    <nav class="footer__col" aria-label="Навигация в подвале">
+      <span>Каталог</span>
+      <a href="#models">Модели</a>
+      <a href="#config">Конфигуратор</a>
+      <a href="#compare">Сравнение</a>
+    </nav>
+    <nav class="footer__col" aria-label="Сервис">
+      <span>Сервис</span>
+      <a href="#">Тест-драйв</a>
+      <a href="#">Гарантия</a>
+      <a href="#">Доставка и оплата</a>
+    </nav>
+    <div class="footer__col">
+      <span>Контакты</span>
+      <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+      <a href="mailto:hi@velomotion.ru">hi@velomotion.ru</a>
+      <a href="https://t.me/velomotion">@velomotion</a>
+    </div>
+  </div>
+  <div class="footer__base">
+    <span>© 2026 VeloMotion Bikes</span>
+    <span>Made in RU · собрано вручную</span>
+  </div>
+  <p class="footer__credits">
+    Технические чертежи: «Bicycle diagram» (Al2, Borb, Richardprins, Keithonearth, Belamp, Hironiemus, Grandiose) и пиктограммы из категории <a href="https://commons.wikimedia.org/wiki/Category:Line_drawings_of_bicycles" rel="noopener" target="_blank">Line drawings of bicycles</a>, Wikimedia Commons — <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener" target="_blank">CC BY 3.0</a>. Карта — © <a href="https://www.openstreetmap.org/copyright" rel="noopener" target="_blank">OpenStreetMap</a> contributors, тайлы © <a href="https://carto.com/attributions" rel="noopener" target="_blank">CARTO</a>, рендер — <a href="https://leafletjs.com/" rel="noopener" target="_blank">Leaflet</a>.
+  </p>
+</footer>
+
+<a class="sticky-cta" href="#config" aria-label="Открыть конфигуратор">
+  <span>Собрать свой</span>
+  <i aria-hidden="true">→</i>
+</a>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
