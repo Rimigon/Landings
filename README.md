@@ -10,7 +10,7 @@ HTML5, CSS3, vanilla JavaScript. Без фреймворков и сборщик
 
 ### ApexFinance Group — финансовые услуги
 <a href="./ApexFinance%20Group">
-  <img src="./screens/ApexFinance%20Group.png" alt="ApexFinance Group" width="100%">
+  <img src="./screens/ApexFinance Group.png" alt="ApexFinance Group" width="100%">
 </a>
 
 ---
