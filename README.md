@@ -8,45 +8,60 @@ HTML5, CSS3, vanilla JavaScript. Без фреймворков и сборщик
 
 ## Живые демо
 
-Все сайты опубликованы через GitHub Pages. Кликни по скриншоту, чтобы открыть.
+Все сайты опубликованы через GitHub Pages. Кликни по миниатюре, чтобы развернуть полный скриншот, или по ссылке — чтобы открыть живой сайт.
 
 ### ApexFinance Group — финансовые услуги
 [🔗 Открыть демо](https://rimigon.github.io/Landings/apex-finance-group/) · [исходники](./apex-finance-group)
-<a href="https://rimigon.github.io/Landings/apex-finance-group/">
+
+<details>
+  <summary><img src="./screens/apex-finance-group.png" alt="ApexFinance Group превью" height="200"></summary>
+  <br>
   <img src="./screens/apex-finance-group.png" alt="ApexFinance Group" width="100%">
-</a>
+</details>
 
 ---
 
 ### ArtisanBakery Co — пекарня
 [🔗 Открыть демо](https://rimigon.github.io/Landings/artisan-bakery-co/) · [исходники](./artisan-bakery-co)
-<a href="https://rimigon.github.io/Landings/artisan-bakery-co/">
+
+<details>
+  <summary><img src="./screens/artisan-bakery-co.png" alt="ArtisanBakery Co превью" height="200"></summary>
+  <br>
   <img src="./screens/artisan-bakery-co.png" alt="ArtisanBakery Co" width="100%">
-</a>
+</details>
 
 ---
 
 ### ClearView Optics — оптика
 [🔗 Открыть демо](https://rimigon.github.io/Landings/clearview-optics/) · [исходники](./clearview-optics)
-<a href="https://rimigon.github.io/Landings/clearview-optics/">
+
+<details>
+  <summary><img src="./screens/clearview-optics.png" alt="ClearView Optics превью" height="200"></summary>
+  <br>
   <img src="./screens/clearview-optics.png" alt="ClearView Optics" width="100%">
-</a>
+</details>
 
 ---
 
 ### DataVault Analytics — аналитика данных
 [🔗 Открыть демо](https://rimigon.github.io/Landings/datavault-analytics/) · [исходники](./datavault-analytics)
-<a href="https://rimigon.github.io/Landings/datavault-analytics/">
+
+<details>
+  <summary><img src="./screens/datavault-analytics.png" alt="DataVault Analytics превью" height="200"></summary>
+  <br>
   <img src="./screens/datavault-analytics.png" alt="DataVault Analytics" width="100%">
-</a>
+</details>
 
 ---
 
 ### LunaBeauty Clinic — клиника красоты
 [🔗 Открыть демо](https://rimigon.github.io/Landings/lunabeauty-clinic/) · [исходники](./lunabeauty-clinic)
-<a href="https://rimigon.github.io/Landings/lunabeauty-clinic/">
+
+<details>
+  <summary><img src="./screens/lunabeauty-clinic.png" alt="LunaBeauty Clinic превью" height="200"></summary>
+  <br>
   <img src="./screens/lunabeauty-clinic.png" alt="LunaBeauty Clinic" width="100%">
-</a>
+</details>
 
 ---
 
@@ -57,49 +72,67 @@ HTML5, CSS3, vanilla JavaScript. Без фреймворков и сборщик
 
 ### NovaStay Hotels — отели
 [🔗 Открыть демо](https://rimigon.github.io/Landings/novastay-hotels/) · [исходники](./novastay-hotels)
-<a href="https://rimigon.github.io/Landings/novastay-hotels/">
+
+<details>
+  <summary><img src="./screens/novastay-hotels.png" alt="NovaStay Hotels превью" height="200"></summary>
+  <br>
   <img src="./screens/novastay-hotels.png" alt="NovaStay Hotels" width="100%">
-</a>
+</details>
 
 ---
 
 ### PeakGear Outdoors — товары для туризма
 [🔗 Открыть демо](https://rimigon.github.io/Landings/peakgear-outdoors/) · [исходники](./peakgear-outdoors)
-<a href="https://rimigon.github.io/Landings/peakgear-outdoors/">
+
+<details>
+  <summary><img src="./screens/peakgear-outdoors.png" alt="PeakGear Outdoors превью" height="200"></summary>
+  <br>
   <img src="./screens/peakgear-outdoors.png" alt="PeakGear Outdoors" width="100%">
-</a>
+</details>
 
 ---
 
 ### QuickFix Repair — ремонтная мастерская
 [🔗 Открыть демо](https://rimigon.github.io/Landings/quickfix-repair/) · [исходники](./quickfix-repair)
-<a href="https://rimigon.github.io/Landings/quickfix-repair/">
+
+<details>
+  <summary><img src="./screens/quickfix-repair.png" alt="QuickFix Repair превью" height="200"></summary>
+  <br>
   <img src="./screens/quickfix-repair.png" alt="QuickFix Repair" width="100%">
-</a>
+</details>
 
 ---
 
 ### TerraBuild Construction — строительная компания
 [🔗 Открыть демо](https://rimigon.github.io/Landings/terrabuild-construction/) · [исходники](./terrabuild-construction)
-<a href="https://rimigon.github.io/Landings/terrabuild-construction/">
+
+<details>
+  <summary><img src="./screens/terrabuild-construction.png" alt="TerraBuild Construction превью" height="200"></summary>
+  <br>
   <img src="./screens/terrabuild-construction.png" alt="TerraBuild Construction" width="100%">
-</a>
+</details>
 
 ---
 
 ### UrbanBrew Coffee — сеть кофеен
 [🔗 Открыть демо](https://rimigon.github.io/Landings/urbanbrew-coffee/) · [исходники](./urbanbrew-coffee)
-<a href="https://rimigon.github.io/Landings/urbanbrew-coffee/">
+
+<details>
+  <summary><img src="./screens/urbanbrew-coffee.png" alt="UrbanBrew Coffee превью" height="200"></summary>
+  <br>
   <img src="./screens/urbanbrew-coffee.png" alt="UrbanBrew Coffee" width="100%">
-</a>
+</details>
 
 ---
 
 ### VeloMotion Bikes — велосипеды
 [🔗 Открыть демо](https://rimigon.github.io/Landings/velomotion-bikes/) · [исходники](./velomotion-bikes)
-<a href="https://rimigon.github.io/Landings/velomotion-bikes/">
+
+<details>
+  <summary><img src="./screens/velomotion-bikes.png" alt="VeloMotion Bikes превью" height="200"></summary>
+  <br>
   <img src="./screens/velomotion-bikes.png" alt="VeloMotion Bikes" width="100%">
-</a>
+</details>
 
 ## Как это работает
 
